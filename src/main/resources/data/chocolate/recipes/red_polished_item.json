@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS ",
+    "SS ",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:red_sand"
+    }
+  },
+  "result": {
+    "item": "chocolate:red_polished",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GWD",
+    "DDD"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:granite"
+    },
+    "D": {
+      "item": "minecraft:diorite"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "item": "chocolate:tile_block",
+    "count": 4
+  }
+}
