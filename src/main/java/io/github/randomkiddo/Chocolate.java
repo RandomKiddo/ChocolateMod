@@ -8,6 +8,7 @@
 
 package io.github.randomkiddo;
 
+import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
 import io.github.randomkiddo.enchants.*;
 import net.fabricmc.api.ModInitializer;
@@ -37,5 +38,6 @@ public class Chocolate implements ModInitializer {
 	@Override public void onInitialize() {
 		EnchantmentRegistry.register();
 		BlockRegistry.register();
+		ArmorRegistry.register();
 	}
 }
