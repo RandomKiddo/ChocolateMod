@@ -11,7 +11,14 @@ package io.github.randomkiddo.enchants;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * Registers all enchantments for this mod
+ */
 public class EnchantmentRegistry {
+    /**
+     * Physically registers all enchantments in this mod
+     * @see Registry
+     */
     public static void register() {
         Registry.register(
                 Registry.ENCHANTMENT,

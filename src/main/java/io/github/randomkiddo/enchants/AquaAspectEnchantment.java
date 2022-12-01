@@ -20,15 +20,58 @@ import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.mob.MagmaCubeEntity;
 import net.minecraft.entity.player.PlayerEntity;
 
+/**
+ * AquaAspectEnchantment increases damage for Blazes, Endermen, and Magma Cubes
+ *
+ * Instantiation:
+ * <code>
+ *     AquaAspectEnchantment aquaAspect = new AquaAspectEnchantment();
+ * </code>
+ *
+ * Overrides:
+ * <code>
+ *     getMaxLevel, getMinLevel, getMinPower, onTargetDamaged, canAccept
+ * </code>
+ *
+ * @see Enchantment
+ * @see BlazeEntity
+ * @see EndermanEntity
+ * @see MagmaCubeEntity
+ */
 public class AquaAspectEnchantment extends Enchantment {
+    /**
+     * Instantiates a new AquaAspectEnchantment with an common rarity for a weapon
+     * @return A AquaAspectEnchantment Instance
+     * @see net.minecraft.enchantment.Enchantment.Rarity
+     * @see EnchantmentTarget
+     */
     public AquaAspectEnchantment() {
         super(Rarity.COMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND } );
     }
+    /**
+     * Gets the maximum possible level of the AquaAspectEnchantment
+     * @return The value 2
+     */
     @Override public int getMaxLevel() { return 2; }
+    /**
+     * Gets the minimum possible level of the AquaAspectEnchantment
+     * @return The value 1
+     */
     @Override public int getMinLevel() { return 1; }
+
+    /**
+     * Gets the minimum power level for a given level
+     * @param level The given level
+     * @return The value 1
+     */
     @Override public int getMinPower(int level) { return 1; }
-    @Override
-    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+    /**
+     * Specifies what happens with this enchantment on an entity being damaged
+     * @param user The user with the enchantment
+     * @param target The target damaged
+     * @param level The level of the enchantment (1 or 2)
+     */
+    @Override public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof BlazeEntity || target instanceof EndermanEntity || target instanceof MagmaCubeEntity) {
             try {
                 float damage = user.getMainHandStack().getDamage();;
@@ -37,8 +80,11 @@ public class AquaAspectEnchantment extends Enchantment {
             } catch (ClassCastException classCastError) { /* pass */ }
         }
     }
-    @Override
-    public boolean canAccept(Enchantment other) {
-        return !(other instanceof FireAspectEnchantment);
-    }
+    /**
+     * Returns if this enchantment can be with another enchantment
+     * @param other The Enchantment to check
+     * @return true if yes, false if no
+     * @see Enchantment
+     */
+    @Override public boolean canAccept(Enchantment other) { return !(other instanceof FireAspectEnchantment); }
 }

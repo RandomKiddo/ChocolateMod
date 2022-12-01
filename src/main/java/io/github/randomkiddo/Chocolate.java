@@ -17,13 +17,24 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
+/**
+ * This class registers and initializes the entire mod. It is called internally by the Fabric API.
+ * @see ModInitializer
+ */
 public class Chocolate implements ModInitializer {
+	/**
+	 * Builds an ItemGroup for this mod
+	 * @see ItemGroup
+	 */
 	public static final ItemGroup CHOCOLATE_GROUP = FabricItemGroupBuilder.create(
 			new Identifier("chocolate", "chocolate_group"))
-			.icon(() -> new ItemStack(Items.LEATHER_BOOTS))
+			.icon(() -> new ItemStack(Items.COCOA_BEANS))
 			.build();
-	@Override
-	public void onInitialize() {
+
+	/**
+	 * Initializes the mod
+	 */
+	@Override public void onInitialize() {
 		EnchantmentRegistry.register();
 		BlockRegistry.register();
 	}
