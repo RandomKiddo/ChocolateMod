@@ -5,7 +5,6 @@
   "enchantment.chocolate.aqua_aspect": "Aqua Aspect",
   "enchantment.chocolate.vampire": "Vampire",
   "enchantment.chocolate.experience": "Experience",
-  "item.chocolate.slime_boots": "Slime Boots",
   "block.chocolate.tile_block": "Tile",
   "item.chocolate.tile_block": "Tile",
   "block.chocolate.red_brick": "Red Sandstone Brick",
@@ -15,5 +14,9 @@
   "block.chocolate.sandstone_brick": "Sandstone Brick",
   "item.chocolate.sandstone_brick": "Sandstone Brick",
   "block.chocolate.polished_sandstone": "Polished Sandstone",
-  "item.chocolate.polished_sandstone": "Polished Sandstone"
+  "item.chocolate.polished_sandstone": "Polished Sandstone",
+  "item.chocolate.emerald_helmet": "Emerald Helmet",
+  "item.chocolate.emerald_chestplate": "Emerald Chestplate",
+  "item.chocolate.emerald_leggings": "Emerald Leggings",
+  "item.chocolate.emerald_boots": "Emerald Boots"
 }
