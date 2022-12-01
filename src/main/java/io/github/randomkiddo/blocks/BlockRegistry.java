@@ -8,6 +8,7 @@
 
 package io.github.randomkiddo.blocks;
 
+import io.github.randomkiddo.Chocolate;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -29,7 +30,7 @@ public class BlockRegistry {
      * Tile Block as an item
      */
     public static final BlockItem TILE_ITEM = new BlockItem(
-            TILE_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            TILE_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Sandstone Brick Block
      */
@@ -38,7 +39,7 @@ public class BlockRegistry {
      * Sandstone Brick Block as an item
      */
     public static final BlockItem SANDSTONE_BRICKS_ITEM = new BlockItem(
-            SANDSTONE_BRICKS_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            SANDSTONE_BRICKS_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Polished Sandstone Block
      */
@@ -47,7 +48,7 @@ public class BlockRegistry {
      * Polished Sandstone Block as an item
      */
     public static final BlockItem POLISHED_SANDSTONE_ITEM = new BlockItem(
-            POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Red Sandstone Brick Block
      */
@@ -56,7 +57,7 @@ public class BlockRegistry {
      * Red Sandstone Brick Block as an item
      */
     public static final BlockItem RED_SANDSTONE_BRICKS_ITEM = new BlockItem(
-            RED_SANDSTONE_BRICKS_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            RED_SANDSTONE_BRICKS_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Red Polished Sandstone Block
      */
@@ -65,7 +66,7 @@ public class BlockRegistry {
      * Red Polished Sandstone Block as an item
      */
     public static final BlockItem RED_POLISHED_SANDSTONE_ITEM = new BlockItem(
-            RED_POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            RED_POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
 
     /**
      * Registers all the blocks and items above
