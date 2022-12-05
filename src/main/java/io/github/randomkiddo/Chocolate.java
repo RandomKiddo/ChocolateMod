@@ -10,6 +10,8 @@ package io.github.randomkiddo;
 
 import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
+import io.github.randomkiddo.effects.PotionsRegistry;
+import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -39,5 +41,7 @@ public class Chocolate implements ModInitializer {
 		EnchantmentRegistry.register();
 		BlockRegistry.register();
 		ArmorRegistry.register();
+		StatusEffectsRegistry.register();
+		PotionsRegistry.register();
 	}
 }

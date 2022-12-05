@@ -18,5 +18,13 @@
   "item.chocolate.emerald_helmet": "Emerald Helmet",
   "item.chocolate.emerald_chestplate": "Emerald Chestplate",
   "item.chocolate.emerald_leggings": "Emerald Leggings",
-  "item.chocolate.emerald_boots": "Emerald Boots"
+  "item.chocolate.emerald_boots": "Emerald Boots",
+  "effect.chocolate.nullify": "Nullify",
+  "item.minecraft.potion.effect.nullify_potion": "Nullify Potion",
+  "item.minecraft.splash_potion.effect.nullify_potion": "Splash Nullify Potion",
+  "item.minecraft.lingering_potion.effect.nullify_potion": "Lingering Nullify Potion",
+  "effect.chocolate.freeze": "Freeze",
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Freeze Potion",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Freeze Potion"
 }
