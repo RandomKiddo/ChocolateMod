@@ -34,11 +34,19 @@ import java.util.Arrays;
  * Registers all ores for this mod
  */
 public class OreRegistry {
+    /**
+     * Configured feature for Foselium
+     * @see ConfiguredFeature
+     */
     private static ConfiguredFeature<?, ?> FOSELIUM_ORE_CONFIGURED_FEATURE = new ConfiguredFeature<>(
             Feature.ORE, new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.END_STONE),
                     BlockRegistry.FOSELIUM_ORE.getDefaultState(), 5
     ));
+    /**
+     * Placed feature for Foselium
+     * @see PlacedFeature
+     */
     public static PlacedFeature FOSELIUM_ORE_PLACED_FEATURE = new PlacedFeature(
             RegistryEntry.of(FOSELIUM_ORE_CONFIGURED_FEATURE),
             Arrays.asList(
@@ -47,6 +55,11 @@ public class OreRegistry {
                     HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(64))
             )
     );
+
+    /**
+     * Registers all the ore features above
+     * @see Registry
+     */
     public static void register() {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new Identifier("chocolate", "foselium_ore"), FOSELIUM_ORE_CONFIGURED_FEATURE);

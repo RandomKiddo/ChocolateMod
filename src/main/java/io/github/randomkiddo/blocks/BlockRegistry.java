@@ -66,7 +66,13 @@ public class BlockRegistry {
      */
     public static final BlockItem RED_POLISHED_SANDSTONE_ITEM = new BlockItem(
             RED_POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Foselium Ore Block
+     */
     public static final Block FOSELIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0f, 2.0f));
+    /**
+     * Foselium Ore Block as an item
+     */
     public static final BlockItem FOSELIUM_ORE_ITEM = new BlockItem(
             FOSELIUM_ORE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
 
