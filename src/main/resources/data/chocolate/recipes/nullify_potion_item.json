@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "G  ",
+    "T  "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "T": {
+      "tag": "minecraft:potion"
+    }
+  },
+  "result": {
+    "item": "minecraft:nullify_potion",
+    "count": 1
+  }
+}

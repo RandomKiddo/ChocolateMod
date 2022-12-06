@@ -14,7 +14,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -67,6 +66,9 @@ public class BlockRegistry {
      */
     public static final BlockItem RED_POLISHED_SANDSTONE_ITEM = new BlockItem(
             RED_POLISHED_SANDSTONE_BLOCK, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    public static final Block FOSELIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0f, 2.0f));
+    public static final BlockItem FOSELIUM_ORE_ITEM = new BlockItem(
+            FOSELIUM_ORE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
 
     /**
      * Registers all the blocks and items above
@@ -83,5 +85,7 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "red_brick"), RED_SANDSTONE_BRICKS_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "red_polished"), RED_POLISHED_SANDSTONE_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "red_polished"), RED_POLISHED_SANDSTONE_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "foselium_ore"), FOSELIUM_ORE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_ore"), FOSELIUM_ORE_ITEM);
     }
 }

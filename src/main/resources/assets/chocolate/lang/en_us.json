@@ -26,5 +26,7 @@
   "effect.chocolate.freeze": "Freeze",
   "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Freeze Potion",
-  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Freeze Potion"
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Freeze Potion",
+  "block.chocolate.foselium_ore": "Foselium Ore",
+  "item.chocolate.foselium_ore": "Foselium Ore"
 }
