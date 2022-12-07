@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "chocolate:foselium_ore"
+  },
+  "result": "chocolate:foselium_ingot",
+  "experience": 2,
+  "cookingtime": 125
+}

@@ -13,6 +13,7 @@ import io.github.randomkiddo.blocks.BlockRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
+import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -45,5 +46,8 @@ public class Chocolate implements ModInitializer {
 		StatusEffectsRegistry.register();
 		PotionsRegistry.register();
 		OreRegistry.register();
+		IngotRegistry.register();
 	}
 }
+
+//todo fix potion recipes
