@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:cocoa_beans"
+  },
+  "result": "chocolate:roasted_cocoa_beans",
+  "experience": 0.5,
+  "cookingtime": 100
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "chocolate:chocolate"
+    },
+    "title": "CHOCOLATE",
+    "description": "CHOCOLATE!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "chocolate:chocolate_liquor",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "chocolate:chocolate"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

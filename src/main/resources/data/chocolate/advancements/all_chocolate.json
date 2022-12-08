@@ -18,7 +18,11 @@
           "advancements": {
             "chocolate:chocolate": true,
             "chocolate:cloud_forest": true,
-            "chocolate:foselium": true
+            "chocolate:foselium": true,
+            "chocolate:roasted_cocoa_beans": true,
+            "chocolate:cocoa_butter": true,
+            "chocolate:chocolate_liquor": true,
+            "chocolate:chocolate_item": true
           }
         }
       }

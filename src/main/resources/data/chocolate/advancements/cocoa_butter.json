@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "chocolate:cocoa_butter"
+    },
+    "title": "Cocoa Butter",
+    "description": "Chocolate Butter?",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "chocolate:roasted_cocoa_beans",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "chocolate:cocoa_butter"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "chocolate:roasted_cocoa_beans" },
+    { "item": "chocolate:cocoa_butter" }
+  ],
+  "result": {
+    "item": "chocolate:chocolate_liquor",
+    "count": 1
+  }
+}
