@@ -29,5 +29,6 @@
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Freeze Potion",
   "block.chocolate.foselium_ore": "Foselium Ore",
   "item.chocolate.foselium_ore": "Foselium Ore",
-  "item.chocolate.foselium_ingot": "Foselium Ingot"
+  "item.chocolate.foselium_ingot": "Foselium Ingot",
+  "biome.chocolate.cloud_forest": "Cloud Forest"
 }

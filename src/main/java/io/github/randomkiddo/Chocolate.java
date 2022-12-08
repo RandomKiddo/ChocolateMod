@@ -10,6 +10,7 @@ package io.github.randomkiddo;
 
 import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
+import io.github.randomkiddo.chocolates.ChocolateRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
@@ -47,7 +48,11 @@ public class Chocolate implements ModInitializer {
 		PotionsRegistry.register();
 		OreRegistry.register();
 		IngotRegistry.register();
+		ChocolateRegistry.register();
 	}
 }
 
 //todo mod image
+//todo translations
+//todo fix advancements
+//todo chocolates

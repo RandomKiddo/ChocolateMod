@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:white_stained_glass_pane"
+    },
+    "title": "All Chocolate Advancements",
+    "description": "Hooray!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "chocolate:chocolate",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "type_specific": {
+          "advancements": {
+            "chocolate:chocolate": true,
+            "chocolate:cloud_forest": true,
+            "chocolate:foselium": true
+          }
+        }
+      }
+    }
+  }
+}
