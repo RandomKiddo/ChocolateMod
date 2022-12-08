@@ -9,7 +9,12 @@
 package io.github.randomkiddo.effects;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.potion.Potions;
+import net.minecraft.recipe.BrewingRecipeRegistry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -28,5 +33,16 @@ public class PotionsRegistry {
         // Freeze Potion
         Registry.register(Registry.POTION, new Identifier("chocolate", "freeze_potion"),
                 new Potion(new StatusEffectInstance(StatusEffectsRegistry.FREEZE, 30*20, 0)));
+        // Register Recipes
+        BrewingRecipeRegistry.registerPotionRecipe(
+                Potions.THICK,
+                Items.GLASS,
+                Potion.byId("chocolate:nullify_potion")
+        );
+        BrewingRecipeRegistry.registerPotionRecipe(
+                Potions.THICK,
+                Items.ICE,
+                Potion.byId("chocolate:freeze_potion")
+        );
     }
 }

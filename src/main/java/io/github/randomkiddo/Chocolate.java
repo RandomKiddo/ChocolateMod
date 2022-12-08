@@ -50,4 +50,4 @@ public class Chocolate implements ModInitializer {
 	}
 }
 
-//todo fix potion recipes
+//todo mod image
