@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "io.github.randomkiddo.Chocolate"
+    ],
+    "client": [
+      "io.github.randomkiddo.ChocolateClient"
     ]
   },
   "mixins": [

@@ -4,9 +4,10 @@
   "package": "io.github.randomkiddo.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "InAcidMixin"
   ],
-  "client": [
-  ],
+  "client": [],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

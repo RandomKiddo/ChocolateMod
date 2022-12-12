@@ -14,6 +14,7 @@ import io.github.randomkiddo.chocolates.ChocolateRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
+import io.github.randomkiddo.fluids.FluidRegistry;
 import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
 import net.fabricmc.api.ModInitializer;
@@ -49,6 +50,7 @@ public class Chocolate implements ModInitializer {
 		OreRegistry.register();
 		IngotRegistry.register();
 		ChocolateRegistry.register();
+		FluidRegistry.register();
 	}
 }
 
