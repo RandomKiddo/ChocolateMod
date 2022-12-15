@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "chocolate:tile_block",
+    "chocolate:sandstone_brick",
+    "chocolate:red_polished",
+    "chocolate:red_brick",
+    "chocolate:foselium_ore",
+    "chocolate:polished_sandstone"
+  ]
+}
+

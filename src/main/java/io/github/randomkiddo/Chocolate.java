@@ -58,6 +58,9 @@ public class Chocolate implements ModInitializer {
 
 //todo mod image
 //todo translations
-//todo fluid generation
+//todo fluid generation acid
 //todo fix advancement gui
 //todo entity custom
+//todo fix advancement get bugs
+//todo check cloud sapling
+//todo freeze texture

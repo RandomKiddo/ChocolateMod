@@ -70,7 +70,7 @@ public class BlockRegistry {
     /**
      * Foselium Ore Block
      */
-    public static final Block FOSELIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0f, 2.0f));
+    public static final Block FOSELIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f));
     /**
      * Foselium Ore Block as an item
      */
@@ -79,7 +79,7 @@ public class BlockRegistry {
     /**
      * Cloud Logs Block
      */
-    public static final Block CLOUD_LOGS = new Block(FabricBlockSettings.of(Material.WOOD));
+    public static final Block CLOUD_LOGS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
     /**
      * Cloud Logs Block as an item
      */
@@ -88,7 +88,7 @@ public class BlockRegistry {
     /**
      * Cloud Planks Block
      */
-    public static final Block CLOUD_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD));
+    public static final Block CLOUD_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
     /**
      * Cloud Planks Block as an item
      */
@@ -97,7 +97,7 @@ public class BlockRegistry {
     /**
      * Cloud Leaves Block
      */
-    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES));
+    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f));
     /**
      * Cloud Leaves Block as an item
      */
@@ -126,7 +126,7 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_planks"), CLOUD_PLANKS_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES_ITEM);
-        FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100);
+        FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
     }
 }
