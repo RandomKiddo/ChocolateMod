@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C ",
+    "C ",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "chocolate:cloud_planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

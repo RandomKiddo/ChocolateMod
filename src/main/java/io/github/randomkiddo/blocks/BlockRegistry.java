@@ -11,6 +11,7 @@ package io.github.randomkiddo.blocks;
 import io.github.randomkiddo.Chocolate;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -75,7 +76,33 @@ public class BlockRegistry {
      */
     public static final BlockItem FOSELIUM_ORE_ITEM = new BlockItem(
             FOSELIUM_ORE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
-
+    /**
+     * Cloud Logs Block
+     */
+    public static final Block CLOUD_LOGS = new Block(FabricBlockSettings.of(Material.WOOD));
+    /**
+     * Cloud Logs Block as an item
+     */
+    public static final BlockItem CLOUD_LOGS_ITEM = new BlockItem(
+            CLOUD_LOGS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Cloud Planks Block
+     */
+    public static final Block CLOUD_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD));
+    /**
+     * Cloud Planks Block as an item
+     */
+    public static final BlockItem CLOUD_PLANKS_ITEM = new BlockItem(
+            CLOUD_PLANKS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Cloud Leaves Block
+     */
+    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES));
+    /**
+     * Cloud Leaves Block as an item
+     */
+    public static final BlockItem CLOUD_LEAVES_ITEM = new BlockItem(
+            CLOUD_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Registers all the blocks and items above
      * @see Registry
@@ -93,5 +120,13 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "red_polished"), RED_POLISHED_SANDSTONE_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "foselium_ore"), FOSELIUM_ORE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_ore"), FOSELIUM_ORE_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_logs"), CLOUD_LOGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_logs"), CLOUD_LOGS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_planks"), CLOUD_PLANKS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_planks"), CLOUD_PLANKS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES_ITEM);
+        FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100);
+        FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
     }
 }

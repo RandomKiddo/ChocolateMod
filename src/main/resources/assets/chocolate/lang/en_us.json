@@ -35,5 +35,13 @@
   "item.chocolate.cocoa_butter": "Cocoa Butter",
   "item.chocolate.chocolate_liquor": "Chocolate Liquor",
   "item.chocolate.chocolate": "Chocolate",
-  "item.chocolate.acid_bucket": "Acid Bucket"
+  "item.chocolate.acid_bucket": "Acid Bucket",
+  "block.chocolate.cloud_sapling": "Cloud Sapling",
+  "item.chocolate.cloud_sapling": "Cloud Sapling",
+  "block.chocolate.cloud_logs": "Cloud Wood Log",
+  "item.chocolate.cloud_logs": "Cloud Wood Log",
+  "block.chocolate.cloud_planks": "Cloud Wood Planks",
+  "item.chocolate.cloud_planks": "Cloud Wood Planks",
+  "block.chocolate.cloud_leaves": "Cloud Wood Leaves",
+  "item.chocolate.cloud_leaves": "Cloud Wood Leaves"
 }

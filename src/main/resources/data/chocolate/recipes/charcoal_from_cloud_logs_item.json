@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "chocolate:cloud_logs"
+  },
+  "result": "minecraft:charcoal",
+  "experience": 0,
+  "cookingtime": 100
+}

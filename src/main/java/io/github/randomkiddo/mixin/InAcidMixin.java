@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in water, and if so,
+ * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in acid, and if so,
  * the entity is set to take damage
  *
  * Injected into <code>isTouchingWater</code> at <code>RETURN</code>
@@ -29,6 +29,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  */
 @Mixin(Entity.class)
 public class InAcidMixin {
+    /**
+     * Injects the specified code into isTouchingWater
+     * @param cir The callback info of the method and its returned boolean value
+     * @see Entity
+     */
     @Inject(method="isTouchingWater()Z", at=@At("RETURN"), cancellable = false)
     private void mixin(CallbackInfoReturnable<Boolean> cir) {
         Entity entity = (Entity)(Object)this;

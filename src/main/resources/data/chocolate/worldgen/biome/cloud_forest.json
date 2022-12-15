@@ -54,7 +54,7 @@
       "minecraft:disk_gravel"],
     [],
     ["minecraft:spring_water"],
-    ["minecraft:trees_jungle", "minecraft:patch_grass_jungle", "minecraft:glow_lichen",
+    ["chocolate:cloud_tree", "minecraft:patch_grass_jungle", "minecraft:glow_lichen",
       "minecraft:bamboo_light", "minecraft:flower_warm", "minecraft:patch_sugar_cane",  "minecraft:vines",
       "minecraft:bamboo", "minecraft:bamboo_vegetation"],
     []
