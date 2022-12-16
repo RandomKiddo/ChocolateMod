@@ -13,7 +13,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
 /**
- * Freeze status effect removes all active status effects while this effect is active
+ * Freeze status effect freezes the current entity
  *
  * Overrides:
  * <code>
