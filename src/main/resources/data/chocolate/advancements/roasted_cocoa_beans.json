@@ -14,15 +14,13 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "conditions": {
-          "items": [
-            {
-              "items": [
-                "chocolate:roasted_cocoa_beans"
-              ]
-            }
-          ]
-        }
+        "items": [
+          {
+            "items": [
+              "chocolate:roasted_cocoa_beans"
+            ]
+          }
+        ]
       }
     }
   }
