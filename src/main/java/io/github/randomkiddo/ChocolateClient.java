@@ -15,8 +15,12 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
+
+import static io.github.randomkiddo.blocks.BlockRegistry.CLOUD_LEAVES;
+import static io.github.randomkiddo.worldgen.TreeRegistry.CLOUD_SAPLING;
 
 /**
  * This class registers and initializes the entire mod's client-side. It is called internally by the Fabric API.
@@ -37,5 +41,7 @@ public class ChocolateClient implements ClientModInitializer {
                 )
         ); //Register client-side of acid fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_ACID, FluidRegistry.FLOWING_ACID);
+        BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout());
     }
 }
