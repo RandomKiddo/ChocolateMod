@@ -19,7 +19,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.feature.LakeFeature;
 
 /**
  * Registers all fluids for this mod
@@ -45,20 +44,17 @@ public class FluidRegistry {
      * @see AcidFluid
      */
     public static Block ACID;
-    @SuppressWarnings({ "deprecated" }) static LakeFeature ACID_LAKE; //todo lake generation
 
     /**
      * Registers all the fluid features above
      * @see Registry
      */
-    @SuppressWarnings({ "deprecated" }) public static void register() {
+    public static void register() {
         STILL_ACID = Registry.register(Registry.FLUID, new Identifier("chocolate", "still_acid"), new AcidFluid.Still());
         FLOWING_ACID = Registry.register(Registry.FLUID, new Identifier("chocolate", "flowing_acid"), new AcidFluid.Flowing());
         ACID_BUCKET = Registry.register(Registry.ITEM, new Identifier("chocolate", "acid_bucket"),
                 new BucketItem(STILL_ACID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1).group(Chocolate.CHOCOLATE_GROUP)));
         ACID = Registry.register(Registry.BLOCK, new Identifier("chocolate", "acid"),
                 new FluidBlock(STILL_ACID, FabricBlockSettings.copy(Blocks.WATER)));
-        //ACID_LAKE = Registry.register(Registry.FEATURE, new Identifier("chocolate", "acid_lake"),
-         //       new LakeFeature(SingleStateFeatureConfig::));
     }
 }
