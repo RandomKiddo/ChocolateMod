@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "F": {
+      "item": "chocolate:foselium_ingot"
+    }
+  },
+  "result": {
+    "item": "chocolate:foselium_pickaxe",
+    "count": 1
+  }
+}
