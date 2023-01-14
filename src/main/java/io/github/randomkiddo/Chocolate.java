@@ -18,6 +18,7 @@ import io.github.randomkiddo.enchants.*;
 import io.github.randomkiddo.fluids.FluidRegistry;
 import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
+import io.github.randomkiddo.tools.ToolRegistry;
 import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
 import io.github.randomkiddo.worldgen.TreeRegistry;
 import net.fabricmc.api.ModInitializer;
@@ -56,5 +57,6 @@ public class Chocolate implements ModInitializer {
 		FluidRegistry.register();
 		TreeRegistry.register();
 		BiomeModificationsRegistry.register();
+		ToolRegistry.register();
 	}
 }
