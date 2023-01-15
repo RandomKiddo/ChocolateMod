@@ -26,11 +26,16 @@ public class StatusEffectsRegistry {
      */
     public static final StatusEffect FREEZE = new FreezeStatusEffect();
     /**
+     * Numb status effect
+     */
+    public static final StatusEffect NUMB = new NumbStatusEffect();
+    /**
      * Registers all the status effects above
      * @see Registry
      */
     public static void register() {
         Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "nullify"), NULLIFY);
         Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "freeze"), FREEZE);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "numb"), NUMB);
     }
 }

@@ -34,6 +34,9 @@ public class PotionsRegistry {
         // Freeze Potion
         Registry.register(Registry.POTION, new Identifier("chocolate", "freeze_potion"),
                 new Potion(new StatusEffectInstance(StatusEffectsRegistry.FREEZE, 30*20, 0)));
+        //Numb Potion
+        Registry.register(Registry.POTION, new Identifier("chocolate", "numb_potion"),
+                new Potion(new StatusEffectInstance(StatusEffectsRegistry.NUMB, 30, 0)));
         // Register Recipes
         BrewingRecipeRegistry.registerPotionRecipe(
                 Potions.THICK,
@@ -44,6 +47,11 @@ public class PotionsRegistry {
                 Potions.THICK,
                 Items.ICE,
                 Potion.byId("chocolate:freeze_potion")
+        );
+        BrewingRecipeRegistry.registerPotionRecipe(
+                Potions.THICK,
+                Items.SNOW_BLOCK,
+                Potion.byId("chocolate:numb_potion")
         );
     }
 }
