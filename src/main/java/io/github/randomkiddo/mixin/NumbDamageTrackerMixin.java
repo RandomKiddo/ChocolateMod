@@ -10,7 +10,6 @@
 package io.github.randomkiddo.mixin;
 
 import io.github.randomkiddo.effects.NumbStatusEffect;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -21,6 +20,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.lang.reflect.Field;
 
+/**
+ * NumbDamageTrackerMixin is a spongepowered mixin for Minecraft that prevents the user from taking damage
+ * while the user has the numb effect, but uses Java Reflection to set the damage to be taken later
+ *
+ * Injected into <code>damage</code> at <code>HEAD</code>
+ * Cancellable (required)
+ *
+ * @see Mixin
+ * @see Inject
+ * @see At
+ * @see LivingEntity
+ */
 @Mixin(LivingEntity.class)
 public class NumbDamageTrackerMixin {
     /**
