@@ -18,7 +18,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 /**
- * AdrenalineEnchantment adds a short duration of Speed, Haste, Strength, and Saturation on damaged
+ * AdrenalineEnchantment adds a short duration of Speed, Haste, Strength, and Saturation when damaged
  *
  * Instantiation:
  * <code>
