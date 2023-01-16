@@ -44,5 +44,9 @@
   "item.chocolate.cloud_planks": "Cloud Wood Planks",
   "block.chocolate.cloud_leaves": "Cloud Wood Leaves",
   "item.chocolate.cloud_leaves": "Cloud Wood Leaves",
-  "item.chocolate.foselium_pickaxe": "Foselium Pickaxe"
+  "item.chocolate.foselium_pickaxe": "Foselium Pickaxe",
+  "effect.chocolate.numb": "Numb",
+  "item.minecraft.potion.effect.numb_potion": "Numb Potion",
+  "item.minecraft.splash_potion.effect.numb_potion": "Splash Numb Potion",
+  "item.minecraft.lingering_potion.effect.numb_potion": "Lingering Numb Potion"
 }
