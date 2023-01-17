@@ -17,7 +17,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 /**
- * Defines the protocol for the material of the emerald armor
+ * Defines the protocol for the material of the slime armor
  *
  * Overrides:
  * <code>
@@ -27,15 +27,15 @@ import net.minecraft.sound.SoundEvents;
  *
  * @see ArmorMaterial
  */
-public class EmeraldMaterial implements ArmorMaterial {
+public class SlimeMaterial implements ArmorMaterial {
     /**
      * Base durability of emerald armor
      */
-    private static final int[] BASE_DURABILITY = {600, 800, 700, 600};
+    private static final int[] BASE_DURABILITY = {100};
     /**
      * Protection values of emerald armor
      */
-    private static final int[] PROTECTION_VALUES = {2, 3, 3, 2};
+    private static final int[] PROTECTION_VALUES = {2};
 
     /**
      * Gets a durability value given an equipment slot
@@ -61,20 +61,20 @@ public class EmeraldMaterial implements ArmorMaterial {
      * Specifies which sound to play when equipping the armor
      * @return Default armor equip sound of diamond armor
      */
-    @Override public SoundEvent getEquipSound() { return SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND;  }
+    @Override public SoundEvent getEquipSound() { return SoundEvents.BLOCK_SLIME_BLOCK_BREAK;  }
 
     /**
      * Gets the ingredient required to repair emerald armor
      * @return Ingredient form of Items.EMERALD
      * @see Items
      */
-    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.EMERALD); }
+    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.SLIME_BALL); }
 
     /**
      * Fetches the name
      * @return A string representing material name
      */
-    @Override public String getName() { return "emerald"; }
+    @Override public String getName() { return "slime"; }
 
     /**
      * Gets the toughness of this armor
