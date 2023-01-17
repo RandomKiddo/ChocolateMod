@@ -30,6 +30,10 @@ public class StatusEffectsRegistry {
      */
     public static final StatusEffect NUMB = new NumbStatusEffect();
     /**
+     * Dazed status effect
+     */
+    public static final StatusEffect DAZED = new DazedStatusEffect();
+    /**
      * Registers all the status effects above
      * @see Registry
      */
@@ -37,5 +41,6 @@ public class StatusEffectsRegistry {
         Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "nullify"), NULLIFY);
         Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "freeze"), FREEZE);
         Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "numb"), NUMB);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("chocolate", "dazed"), DAZED);
     }
 }
