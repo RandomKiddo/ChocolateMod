@@ -51,6 +51,19 @@ public class ArmorRegistry {
     public static final Item EMERALD_BOOTS = new ArmorItem(EMERALD_ARMOR_MATERIAL, EquipmentSlot.FEET,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
     /**
+     * Slime armor material instance
+     */
+    public static final ArmorMaterial SLIME_ARMOR_MATERIAL = new SlimeMaterial();
+    /**
+     * Physical slime material
+     */
+    public static final Item SLIME_MATERIAL = Items.SLIME_BALL;
+    /**
+     * Slime boots item
+     */
+    public static final Item SLIME_BOOTS = new ArmorItem(SLIME_ARMOR_MATERIAL, EquipmentSlot.FEET,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the items above
      * @see Registry
      */
@@ -59,5 +72,6 @@ public class ArmorRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_chestplate"), EMERALD_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_leggings"), EMERALD_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_boots"), EMERALD_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "slime_boots"), SLIME_BOOTS);
     }
 }

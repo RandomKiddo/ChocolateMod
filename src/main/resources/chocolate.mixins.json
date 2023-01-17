@@ -4,7 +4,7 @@
   "package": "io.github.randomkiddo.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "InAcidMixin", "CloudTrunkPlacerTypeInvoker", "NumbDamageTrackerMixin"
+    "InAcidMixin", "CloudTrunkPlacerTypeInvoker", "NumbDamageTrackerMixin", "PlayerFallDamageMixin"
   ],
   "client": [],
   "server": [],
