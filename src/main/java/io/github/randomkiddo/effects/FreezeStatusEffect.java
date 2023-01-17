@@ -3,7 +3,8 @@
  * For more information, see: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Copyright © 2021 RandomKiddo
- * Copyright © 2022 RandomKiddo
+ * Copyright © 2022 RandomKiddo, danield33
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.effects;
@@ -13,7 +14,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
 /**
- * Freeze status effect removes all active status effects while this effect is active
+ * Freeze status effect freezes the current entity
  *
  * Overrides:
  * <code>

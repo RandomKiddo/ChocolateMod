@@ -10,24 +10,30 @@
 package io.github.randomkiddo.effects;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
 /**
- * Nullify status effect removes all active status effects while this effect is active
+ * Numb status effect prevents the user from taking damage, then they take all of it at once
  *
  * Overrides:
  * <code>
- *     canApplyUpdateEffect, applyUpdateEffect, isInstant
+ *     canApplyUpdateEffect, applyUpdateEffect, isInstant, onRemove
  * </code>
  *
  * @see StatusEffect
  */
-public class NullifyStatusEffect extends StatusEffect {
+public class NumbStatusEffect extends StatusEffect {
     /**
-     * Instantiates a new nullify status effect
+     * The total saved damage to take
      */
-    public NullifyStatusEffect() { super(StatusEffectCategory.NEUTRAL, 0x000000); }
+    private float totalDamage;
+    /**
+     * Instantiates a new numb status effect
+     */
+    public NumbStatusEffect() { super(StatusEffectCategory.HARMFUL, 0x47007d); this.totalDamage = 0.0f; }
 
     /**
      * Returns if this effect's update effect can be applied
@@ -43,11 +49,6 @@ public class NullifyStatusEffect extends StatusEffect {
      * @param amplifier The effect's amplifier
      */
     @Override public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        for (StatusEffect effect : entity.getActiveStatusEffects().keySet()) {
-            if (!effect.getClass().equals(NullifyStatusEffect.class)) {
-                entity.removeStatusEffect(effect);
-            }
-        }
         super.applyUpdateEffect(entity, amplifier);
     }
 
@@ -56,4 +57,15 @@ public class NullifyStatusEffect extends StatusEffect {
      * @return true is yes, false if no
      */
     @Override public boolean isInstant() { return false; }
+
+    /**
+     * Specifies what to do once this effect is removed
+     * @param entity The living entity
+     * @param attributes Attributes
+     * @param amplifier The effect amplifier
+     */
+    @Override public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
+        entity.damage(DamageSource.GENERIC, this.totalDamage);
+        super.onRemoved(entity, attributes, amplifier);
+    }
 }

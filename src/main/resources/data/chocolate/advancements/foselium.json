@@ -14,15 +14,13 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "conditions": {
-          "items": [
-            {
-              "items": [
-                "chocolate:foselium_ingot"
-              ]
-            }
-          ]
-        }
+        "items": [
+          {
+            "items": [
+              "chocolate:foselium_ingot"
+            ]
+          }
+        ]
       }
     }
   }

@@ -3,7 +3,8 @@
  * For more information, see: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Copyright © 2021 RandomKiddo
- * Copyright © 2022 RandomKiddo
+ * Copyright © 2022 RandomKiddo, danield33
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.enchants;
@@ -17,7 +18,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 /**
- * AdrenalineEnchantment adds a short duration of Speed, Haste, Strength, and Saturation on damaged
+ * AdrenalineEnchantment adds a short duration of Speed, Haste, Strength, and Saturation when damaged
  *
  * Instantiation:
  * <code>

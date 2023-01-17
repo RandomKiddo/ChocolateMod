@@ -14,15 +14,13 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "conditions": {
-          "items": [
-            {
-              "items": [
-                "chocolate:chocolate_liquor"
-              ]
-            }
-          ]
-        }
+        "items": [
+          {
+            "items": [
+              "chocolate:chocolate_liquor"
+            ]
+          }
+        ]
       }
     }
   }

@@ -3,7 +3,8 @@
  * For more information, see: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Copyright © 2021 RandomKiddo
- * Copyright © 2022 RandomKiddo
+ * Copyright © 2022 RandomKiddo, danield33
+ * Copyright © 2023 RandomKiddo
  */
 
 package io.github.randomkiddo;
@@ -17,6 +18,9 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
+
+import static io.github.randomkiddo.blocks.BlockRegistry.CLOUD_LEAVES;
+import static io.github.randomkiddo.worldgen.TreeRegistry.CLOUD_SAPLING;
 
 /**
  * This class registers and initializes the entire mod's client-side. It is called internally by the Fabric API.
@@ -37,5 +41,7 @@ public class ChocolateClient implements ClientModInitializer {
                 )
         ); //Register client-side of acid fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_ACID, FluidRegistry.FLOWING_ACID);
+        BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout()); // Register cloud sapling rendering
+        BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
     }
 }

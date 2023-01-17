@@ -3,7 +3,8 @@
  * For more information, see: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Copyright © 2021 RandomKiddo
- * Copyright © 2022 RandomKiddo
+ * Copyright © 2022 RandomKiddo, danield33
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo;
@@ -17,6 +18,8 @@ import io.github.randomkiddo.enchants.*;
 import io.github.randomkiddo.fluids.FluidRegistry;
 import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
+import io.github.randomkiddo.tools.ToolRegistry;
+import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
 import io.github.randomkiddo.worldgen.TreeRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -53,14 +56,7 @@ public class Chocolate implements ModInitializer {
 		ChocolateRegistry.register();
 		FluidRegistry.register();
 		TreeRegistry.register();
+		BiomeModificationsRegistry.register();
+		ToolRegistry.register();
 	}
 }
-
-//todo mod image
-//todo translations
-//todo fluid generation acid
-//todo fix advancement gui
-//todo entity custom
-//todo fix advancement get bugs
-//todo check cloud sapling
-//todo freeze texture

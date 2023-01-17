@@ -14,8 +14,11 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "biome": "chocolate:cloud_forest"
+        "player": {
+          "location": {
+            "biome": "chocolate:cloud_forest",
+            "dimension": "minecraft:overworld"
+          }
         }
       }
     }

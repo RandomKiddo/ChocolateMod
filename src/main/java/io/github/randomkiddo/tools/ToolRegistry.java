@@ -7,29 +7,29 @@
  * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
-package io.github.randomkiddo.ores;
+package io.github.randomkiddo.tools;
 
 import io.github.randomkiddo.Chocolate;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 /**
- * Registers all ingots for this mod
+ * Registers all tools for this mod
  */
-public class IngotRegistry {
+public class ToolRegistry {
     /**
-     * Foselium ingot item
+     * Foselium pickaxe instance
      */
-    public static final Item FOSELIUM_INGOT = new Item(new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    public static ToolItem FOSELIUM_PICKAXE = new FoseliumPickaxeItem(FoseliumMaterial.INSTANCE, 2, -2.8F, new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+
     /**
-     * Registers all the ore features above
+     * Registers all the tool instances above
      * @see Registry
      */
     public static void register() {
-        Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_ingot"), FOSELIUM_INGOT);
-        FuelRegistry.INSTANCE.add(FOSELIUM_INGOT, 300); // Foselium smelt-able
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_pickaxe"), FOSELIUM_PICKAXE);
     }
 }
+//todo texture for pickaxe
