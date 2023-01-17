@@ -27,7 +27,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * @see Mixin
  * @see Inject
  * @see At
- * @see net.minecraft.entity.player.PlayerEntity
+ * @see PlayerEntity
  */
 @Mixin(PlayerEntity.class)
 public class PlayerFallDamageMixin {
@@ -43,13 +43,13 @@ public class PlayerFallDamageMixin {
         PlayerEntity player = (PlayerEntity)(Object)this;
         if (source.isFromFalling()) {
             player.getArmorItems().forEach((item) -> {
-                System.out.println(item.toString());
                 if (item.toString().contains("slime_boots")) {
-                    Vec3d vnought = player.getVelocity();
-                    System.out.println(vnought);
-                    Vec3d v = new Vec3d(vnought.getX() / 2, vnought.getY() / 2, vnought.getZ() * -1 / 1.1);
-                    System.out.println(v);
-                    player.setVelocity(v);
+                    Vec3d vNought = player.getVelocity();
+                    player.setVelocity(vNought.getX(), vNought.getY()*-1, vNought.getZ());
+                    player.velocityModified = true;
+                    item.damage((int)Math.ceil(-1*vNought.getY()), player, (p) -> {
+                        p.sendToolBreakStatus(p.getActiveHand());
+                    });
                     cir.cancel();
                 }
             });
