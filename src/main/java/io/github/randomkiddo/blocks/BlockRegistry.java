@@ -98,7 +98,7 @@ public class BlockRegistry {
     /**
      * Cloud Leaves Block
      */
-    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f));
+    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f).nonOpaque());
     /**
      * Cloud Leaves Block as an item
      */

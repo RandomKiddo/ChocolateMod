@@ -61,7 +61,7 @@ public class SlimeMaterial implements ArmorMaterial {
      * Specifies which sound to play when equipping the armor
      * @return Default armor equip sound of diamond armor
      */
-    @Override public SoundEvent getEquipSound() { return SoundEvents.BLOCK_SLIME_BLOCK_BREAK;  }
+    @Override public SoundEvent getEquipSound() { return SoundEvents.BLOCK_SLIME_BLOCK_PLACE;  }
 
     /**
      * Gets the ingredient required to repair emerald armor
