@@ -104,6 +104,15 @@ public class BlockRegistry {
     public static final BlockItem CLOUD_LEAVES_ITEM = new BlockItem(
             CLOUD_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
+     * Milk Chocolate Block
+     */
+    public static final Block MILK_CHOCOLATE = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 1.0f));
+    /**
+     * Milk Chocolate Block as an item
+     */
+    public static final BlockItem MILK_CHOCOLATE_ITEM = new BlockItem(
+            MILK_CHOCOLATE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the blocks and items above
      * @see Registry
      */
@@ -126,6 +135,8 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_planks"), CLOUD_PLANKS_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "milk_chocolate"), MILK_CHOCOLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "milk_chocolate"), MILK_CHOCOLATE_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
     }
