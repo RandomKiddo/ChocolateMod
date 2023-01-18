@@ -47,22 +47,22 @@ public class FluidRegistry {
     public static Block ACID;
     /**
      * Represents the still FlowableFluid of Chocolate Milk
-     * @see AcidFluid
+     * @see ChocolateMilkFluid
      */
     public static FlowableFluid STILL_CHOCOLATE_MILK;
     /**
      * Represents the flowing FlowableFluid of Chocolate Milk
-     * @see AcidFluid
+     * @see ChocolateMilkFluid
      */
     public static FlowableFluid FLOWING_CHOCOLATE_MILK;
     /**
      * Represents the bucket item of Chocolate Milk
-     * @see AcidFluid
+     * @see ChocolateMilkFluid
      */
     public static Item CHOCOLATE_MILK_BUCKET;
     /**
      * Represents the block version of Chocolate
-     * @see AcidFluid
+     * @see ChocolateMilkFluid
      */
     public static Block CHOCOLATE_MILK;
 
