@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "chocolate:still_acid",
-    "chocolate:flowing_acid"
+    "chocolate:flowing_acid",
+    "chocolate:still_chocolate_milk",
+    "chocolate:flowing_chocolate_milk"
   ]
 }
