@@ -96,9 +96,9 @@ public class BlockRegistry {
     public static final BlockItem CLOUD_PLANKS_ITEM = new BlockItem(
             CLOUD_PLANKS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Cloud Leaves Block
+     * Cloud Leaves Block (nonOpaque helps with rendering)
      */
-    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f));
+    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f).nonOpaque());
     /**
      * Cloud Leaves Block as an item
      */
