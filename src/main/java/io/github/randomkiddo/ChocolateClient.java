@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo;
@@ -49,7 +49,6 @@ public class ChocolateClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_ACID, FluidRegistry.FLOWING_ACID);
         BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout()); // Register cloud sapling rendering
         BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
-
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
             registry.register(new Identifier("chocolate:block/chocolate_milk_still"));
             registry.register(new Identifier("chocolate:block/chocolate_milk_flow"));
@@ -62,5 +61,13 @@ public class ChocolateClient implements ClientModInitializer {
                 )
         ); //Register client-side of chocolate milk fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), STILL_CHOCOLATE_MILK, FluidRegistry.FLOWING_CHOCOLATE_MILK);
+        FluidRenderHandlerRegistry.INSTANCE.register(FluidRegistry.STILL_SOAP, FluidRegistry.FLOWING_SOAP,
+                new SimpleFluidRenderHandler(
+                        new Identifier("minecraft:block/water_still"),
+                        new Identifier("minecraft:block/water_flow"),
+                        0xf522c4
+                )
+        ); //Register client-side of soap fluid
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_SOAP, FluidRegistry.FLOWING_SOAP);
     }
 }

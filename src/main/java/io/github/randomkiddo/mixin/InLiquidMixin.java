@@ -10,15 +10,19 @@
 package io.github.randomkiddo.mixin;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.Collection;
+
 /**
- * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in acid, and if so,
- * the entity is set to take damage
+ * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in liquid,
+ * and then follows the corresponding code
  *
  * Injected into <code>isTouchingWater</code> at <code>RETURN</code>
  * Non-cancellable
@@ -29,7 +33,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * @see Entity
  */
 @Mixin(Entity.class)
-public class InAcidMixin {
+public class InLiquidMixin {
     /**
      * Injects the specified code into isTouchingWater
      * @param cir The callback info of the method and its returned boolean value
@@ -40,7 +44,20 @@ public class InAcidMixin {
         Entity entity = (Entity)(Object)this;
         String name = entity.getBlockStateAtPos().getBlock().getName().toString();
         if (cir.getReturnValue() && name.contains("block.chocolate.acid")) {
-            entity.damage(DamageSource.LAVA, 15.0f);
+            entity.damage(DamageSource.GENERIC, 15.0f);
+        } else if (cir.getReturnValue() && name.contains("block.chocolate.soap")) {
+            try {
+                LivingEntity le = (LivingEntity)entity;
+                Collection<StatusEffectInstance> collection = le.getStatusEffects();
+                for (int i = 0; i < collection.size(); ++i) {
+                    StatusEffectInstance instance = (StatusEffectInstance)collection.toArray()[i];
+                    if (!instance.getEffectType().isBeneficial()) {
+                        le.removeStatusEffect(instance.getEffectType());
+                    }
+                }
+            } catch (ClassCastException cce) {
+                /* do nothing */
+            }
         }
     }
 }
