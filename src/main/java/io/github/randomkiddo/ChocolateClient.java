@@ -60,7 +60,7 @@ public class ChocolateClient implements ClientModInitializer {
                         new Identifier("chocolate:block/chocolate_milk_flow"),
                         0x84563c
                 )
-        ); //Register client-side of acid fluid
+        ); //Register client-side of chocolate milk fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), STILL_CHOCOLATE_MILK, FluidRegistry.FLOWING_CHOCOLATE_MILK);
     }
 }
