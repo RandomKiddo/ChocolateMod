@@ -17,8 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in acid, and if so,
- * the entity is set to take damage
+ * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in chocolate, and kills the player
  *
  * Injected into <code>isTouchingWater</code> at <code>RETURN</code>
  * Non-cancellable
