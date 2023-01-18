@@ -45,6 +45,27 @@ public class FluidRegistry {
      * @see AcidFluid
      */
     public static Block ACID;
+    /**
+     * Represents the still FlowableFluid of Chocolate Milk
+     * @see ChocolateMilkFluid
+     */
+    public static FlowableFluid STILL_CHOCOLATE_MILK;
+    /**
+     * Represents the flowing FlowableFluid of Chocolate Milk
+     * @see ChocolateMilkFluid
+     */
+    public static FlowableFluid FLOWING_CHOCOLATE_MILK;
+    /**
+     * Represents the bucket item of Chocolate Milk
+     * @see ChocolateMilkFluid
+     */
+    public static Item CHOCOLATE_MILK_BUCKET;
+    /**
+     * Represents the block version of Chocolate
+     * @see ChocolateMilkFluid
+     */
+    public static Block CHOCOLATE_MILK;
+
 
     /**
      * Registers all the fluid features above
@@ -57,5 +78,11 @@ public class FluidRegistry {
                 new BucketItem(STILL_ACID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1).group(Chocolate.CHOCOLATE_GROUP)));
         ACID = Registry.register(Registry.BLOCK, new Identifier("chocolate", "acid"),
                 new FluidBlock(STILL_ACID, FabricBlockSettings.copy(Blocks.WATER)));
+        STILL_CHOCOLATE_MILK = Registry.register(Registry.FLUID, new Identifier("chocolate", "still_chocolate_milk"), new ChocolateMilkFluid.Still());
+        FLOWING_CHOCOLATE_MILK = Registry.register(Registry.FLUID, new Identifier("chocolate", "flowing_chocolate_milk"), new ChocolateMilkFluid.Flowing());
+        CHOCOLATE_MILK_BUCKET = Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_milk_bucket"),
+                new BucketItem(STILL_CHOCOLATE_MILK, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1).group(Chocolate.CHOCOLATE_GROUP)));
+        CHOCOLATE_MILK = Registry.register(Registry.BLOCK, new Identifier("chocolate", "chocolate_milk"),
+                new FluidBlock(STILL_CHOCOLATE_MILK, FabricBlockSettings.copy(Blocks.WATER)));
     }
 }
