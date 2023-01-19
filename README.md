@@ -55,7 +55,7 @@ ___
 
 <sub>Developer</sub>
 
-Description
+Average Sigma Male Anime Consumer that Games Valorant and MC w/ the Bois
 
 Years Active on Project: 2023-Present
 
@@ -69,7 +69,7 @@ ___
 
 <sub>Developer</sub>
 
-Description
+My name is Pranav Moola and I am a freshman majoring in electrical engineering at Ohio State University. I enjoy playing tennis, hanging out with friends/family, and biking nature trails. I joined the Chocolate Mod to learn fabric modding and to explore a new area of programming. I also joined it because chocolate ice cream is superior to vanilla.
 
 Years Active on Project: 2023-Present
 
@@ -83,7 +83,7 @@ ___
 
 <sub>Lead Texture Designer, Junior Developer</sub>
 
-Enjoys playing tennis and gaming. Aerospace engineer and the Ohio State University.
+Enjoys playing tennis and gaming. Aerospace Engineer at the Ohio State University.
 
 Years Active on Project: 2022-Present
 
@@ -97,7 +97,7 @@ ___
 
 <sub>Creative Director</sub>
 
-I am Majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
+I am majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
 
 Years Active on Project: N/A
 
