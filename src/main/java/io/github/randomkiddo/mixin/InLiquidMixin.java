@@ -21,6 +21,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Collection;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -52,6 +53,7 @@ public class InLiquidMixin {
                         pe.getInventory().getArmorStack(2), pe.getInventory().getArmorStack(3) };
                 AtomicReference<Float> totalDamage = new AtomicReference<>(0.0f);
                 for (ItemStack item : armor) {
+                    AtomicBoolean changed = new AtomicBoolean(false);
                     item.getEnchantments().forEach(element -> {
                         String str = element.toString();
                         int index = str.indexOf("corrosion_resistance");
@@ -60,6 +62,7 @@ public class InLiquidMixin {
                                 try {
                                     int lvl = Integer.parseInt(str.charAt(i) + "");
                                     totalDamage.updateAndGet(v -> v + (3.75f - (float)lvl));
+                                    changed.set(true);
                                     break;
                                 } catch (Exception e) {
                                     /* do nothing */
@@ -67,8 +70,12 @@ public class InLiquidMixin {
                             }
                         } else {
                             totalDamage.updateAndGet(v -> v + 3.75f);
+                            changed.set(true);
                         }
                     });
+                    if (!changed.get()) {
+                        totalDamage.updateAndGet(v -> v + 3.75f);
+                    }
                 }
                 if ((int)(float)totalDamage.get() == 0) { totalDamage.updateAndGet(v -> 15.0f); }
                 pe.damage(DamageSource.GENERIC, (float)totalDamage.get());
