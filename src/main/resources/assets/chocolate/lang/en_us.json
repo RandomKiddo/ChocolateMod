@@ -55,5 +55,7 @@
   "item.chocolate.dark_chocolate": "Dark Chocolate",
   "item.chocolate.chocolate_milk_bucket": "Chocolate Milk Bucket",
   "item.chocolate.slime_boots": "Slime Boots",
-  "item.chocolate.soap_bucket": "Soap Bucket"
+  "item.chocolate.soap_bucket": "Soap Bucket",
+  "enchantment.chocolate.corrosion_resistance": "Corrosion Resistance",
+  "itemGroup.chocolate.chocolate_group": "Chocolate"
 }

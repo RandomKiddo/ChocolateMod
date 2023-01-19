@@ -51,5 +51,10 @@ public class EnchantmentRegistry {
                 new Identifier("chocolate", "experience"),
                 new ExperienceEnchantment()
         );
+        Registry.register(
+                Registry.ENCHANTMENT,
+                new Identifier("chocolate", "corrosion_resistance"),
+                new CorrosionResistanceEnchantment()
+        );
     }
 }
