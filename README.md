@@ -41,7 +41,7 @@ ___
 
 <sub>Lead Developer</sub>
 
-Description
+My name is Daniel, I'm a computer science engineering student at OSU. I like to program and do fun stuff.
 
 Years Active on Project: 2022-Present
 
