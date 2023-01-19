@@ -36,7 +36,7 @@ import net.minecraft.entity.effect.StatusEffects;
 public class CorrosionResistanceEnchantment extends Enchantment {
     /**
      * Instantiates a new CorrosionResistanceEnchantment with a rare rarity for armor
-     * @return A AdrenalineEnchantment Instance
+     * @return A CorrosionResistanceEnchantment Instance
      * @see net.minecraft.enchantment.Enchantment.Rarity
      * @see EnchantmentTarget
      */
