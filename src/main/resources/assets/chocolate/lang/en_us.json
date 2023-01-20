@@ -57,5 +57,6 @@
   "item.chocolate.slime_boots": "Slime Boots",
   "item.chocolate.soap_bucket": "Soap Bucket",
   "enchantment.chocolate.corrosion_resistance": "Corrosion Resistance",
-  "itemGroup.chocolate.chocolate_group": "Chocolate"
+  "itemGroup.chocolate.chocolate_group": "Chocolate",
+  "item.chocolate.soap": "Soap"
 }
