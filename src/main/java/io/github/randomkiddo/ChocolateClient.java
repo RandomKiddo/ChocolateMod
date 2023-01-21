@@ -9,6 +9,7 @@
 
 package io.github.randomkiddo;
 
+import io.github.randomkiddo.config.ConfigRegistry;
 import io.github.randomkiddo.fluids.FluidRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -48,7 +49,9 @@ public class ChocolateClient implements ClientModInitializer {
         ); //Register client-side of acid fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_ACID, FluidRegistry.FLOWING_ACID);
         BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout()); // Register cloud sapling rendering
-        BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
+        if (!ConfigRegistry.USING_FAST_GRAPHICS) {
+            BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
+        }
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
             registry.register(new Identifier("chocolate:block/chocolate_milk_still"));
             registry.register(new Identifier("chocolate:block/chocolate_milk_flow"));

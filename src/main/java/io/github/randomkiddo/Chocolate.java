@@ -12,6 +12,7 @@ package io.github.randomkiddo;
 import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
 import io.github.randomkiddo.chocolates.ChocolateRegistry;
+import io.github.randomkiddo.config.ConfigRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
@@ -60,5 +61,6 @@ public class Chocolate implements ModInitializer {
 		BiomeModificationsRegistry.register();
 		ToolRegistry.register();
 		ItemRegistry.register();
+		ConfigRegistry.register();
 	}
 }
