@@ -9,6 +9,7 @@
 
 package io.github.randomkiddo.mixin;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Vec3d;
@@ -48,7 +49,7 @@ public class PlayerFallDamageMixin {
                     player.setVelocity(vNought.getX(), vNought.getY()*-1, vNought.getZ());
                     player.velocityModified = true;
                     item.damage((int)Math.ceil(-1*vNought.getY()), player, (p) -> {
-                        p.sendToolBreakStatus(p.getActiveHand());
+                        p.sendEquipmentBreakStatus(EquipmentSlot.FEET);
                     });
                     cir.cancel();
                 }

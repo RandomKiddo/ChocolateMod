@@ -66,5 +66,9 @@
   "item.chocolate.chocolate_shovel": "Chocolate Shovel",
   "item.minecraft.tipped_arrow.effect.numb_potion": "Numb Tipped Arrow",
   "item.minecraft.tipped_arrow.effect.freeze_potion": "Freeze Tipped Arrow",
-  "item.minecraft.tipped_arrow.effect.nullify_potion": "Nullify Tipped Arrow"
+  "item.minecraft.tipped_arrow.effect.nullify_potion": "Nullify Tipped Arrow",
+  "item.chocolate.chocolate_helmet": "Chocolate Helmet",
+  "item.chocolate.chocolate_chestplate": "Chocolate Chestplate",
+  "item.chocolate.chocolate_leggings": "Chocolate Leggings",
+  "item.chocolate.chocolate_boots": "Chocolate Boots"
 }
