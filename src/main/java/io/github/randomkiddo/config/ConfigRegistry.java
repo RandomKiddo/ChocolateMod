@@ -13,10 +13,26 @@ import com.mojang.datafixers.util.Pair;
 
 import java.util.logging.LogManager;
 
+/**
+ * Registers the config file for this mod
+ */
 public class ConfigRegistry {
+    /**
+     * The main config
+     */
     public static MainConfig CONFIG;
+    /**
+     * The config provider
+     */
     private static ConfigProvider configs;
+    /**
+     * Holds if the user is using fast graphics
+     */
     public static boolean USING_FAST_GRAPHICS;
+
+    /**
+     * Registers the configs
+     */
     public static void register() {
         LogManager.getLogManager().addLogger(MainConfig.LOGGER);
         configs = new ConfigProvider();

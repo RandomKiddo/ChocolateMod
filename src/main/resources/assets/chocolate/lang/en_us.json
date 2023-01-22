@@ -58,5 +58,13 @@
   "item.chocolate.soap_bucket": "Soap Bucket",
   "enchantment.chocolate.corrosion_resistance": "Corrosion Resistance",
   "itemGroup.chocolate.chocolate_group": "Chocolate",
-  "item.chocolate.soap": "Soap"
+  "item.chocolate.soap": "Soap",
+  "item.chocolate.chocolate_pickaxe": "Chocolate Pickaxe",
+  "item.chocolate.chocolate_hoe": "Chocolate Hoe",
+  "item.chocolate.chocolate_axe": "Chocolate Axe",
+  "item.chocolate.chocolate_sword": "Chocolate Sword",
+  "item.chocolate.chocolate_shovel": "Chocolate Shovel",
+  "item.minecraft.tipped_arrow.effect.numb_potion": "Numb Tipped Arrow",
+  "item.minecraft.tipped_arrow.effect.freeze_potion": "Freeze Tipped Arrow",
+  "item.minecraft.tipped_arrow.effect.nullify_potion": "Nullify Tipped Arrow"
 }
