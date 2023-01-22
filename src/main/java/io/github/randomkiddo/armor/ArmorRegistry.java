@@ -11,10 +11,7 @@ package io.github.randomkiddo.armor;
 
 import io.github.randomkiddo.Chocolate;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -77,22 +74,22 @@ public class ArmorRegistry {
      * Chocolate helmet item
      */
     public static final Item CHOCOLATE_HELMET = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.HEAD,
-            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
      * Chocolate chestplate item
      */
     public static final Item CHOCOLATE_CHESTPLATE = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.CHEST,
-            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
      * Chocolate leggings item
      */
     public static final Item CHOCOLATE_LEGGINGS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.LEGS,
-            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
      * Chocolate boots item
      */
     public static final Item CHOCOLATE_BOOTS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.FEET,
-            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
      * Registers all the items above
      * @see Registry
