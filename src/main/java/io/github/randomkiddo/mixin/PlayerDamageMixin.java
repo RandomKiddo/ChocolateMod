@@ -11,12 +11,17 @@ package io.github.randomkiddo.mixin;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * PlayerFallDamageMixin is a spongepowered mixin for Minecraft that checks when the user takes damage
@@ -31,7 +36,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * @see PlayerEntity
  */
 @Mixin(PlayerEntity.class)
-public class PlayerFallDamageMixin {
+public class PlayerDamageMixin {
     /**
      * Injects the specified code into damage method
      * @param source The damage source
@@ -54,6 +59,21 @@ public class PlayerFallDamageMixin {
                     cir.cancel();
                 }
             });
+        } else if (source.equals(DamageSource.LIGHTNING_BOLT)) {
+            for (ItemStack item : player.getArmorItems()) {
+                if (!item.toString().contains("copper_")) { return; }
+            }
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 15*20));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 15*20, 2));
+            final EquipmentSlot[] slots = { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
+            AtomicInteger slot = new AtomicInteger();
+            for (ItemStack item : player.getArmorItems()) {
+                item.damage(10, player, p -> {
+                    p.sendEquipmentBreakStatus(slots[slot.get()]);
+                    slot.incrementAndGet();
+                });
+            }
+            cir.cancel();
         }
     }
 }

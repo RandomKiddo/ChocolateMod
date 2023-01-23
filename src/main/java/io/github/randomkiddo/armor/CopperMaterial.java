@@ -17,7 +17,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 /**
- * Defines the protocol for the material of the slime armor
+ * Defines the protocol for the material of the copper armor
  *
  * Overrides:
  * <code>
@@ -27,15 +27,15 @@ import net.minecraft.sound.SoundEvents;
  *
  * @see ArmorMaterial
  */
-public class SlimeMaterial implements ArmorMaterial {
+public class CopperMaterial implements ArmorMaterial {
     /**
-     * Base durability of emerald armor
+     * Base durability of copper armor
      */
-    private static final int[] BASE_DURABILITY = {100};
+    private static final int[] BASE_DURABILITY = {165, 240, 225, 165};
     /**
-     * Protection values of emerald armor
+     * Protection values of copper armor
      */
-    private static final int[] PROTECTION_VALUES = {2};
+    private static final int[] PROTECTION_VALUES = {2, 4, 4, 1};
 
     /**
      * Gets a durability value given an equipment slot
@@ -52,29 +52,29 @@ public class SlimeMaterial implements ArmorMaterial {
     @Override public int getProtectionAmount(EquipmentSlot slot) { return PROTECTION_VALUES[slot.getEntitySlotId()]; }
 
     /**
-     * Gets the enchantability factor of emerald armor
+     * Gets the enchantability factor of copper armor
      * @return The value 1
      */
     @Override public int getEnchantability() { return 1; }
 
     /**
      * Specifies which sound to play when equipping the armor
-     * @return Default armor equip sound of diamond armor
+     * @return Default armor equip sound of iron armor
      */
-    @Override public SoundEvent getEquipSound() { return SoundEvents.BLOCK_SLIME_BLOCK_PLACE;  }
+    @Override public SoundEvent getEquipSound() { return SoundEvents.ITEM_ARMOR_EQUIP_IRON;  }
 
     /**
      * Gets the ingredient required to repair emerald armor
-     * @return Ingredient form of Items.SLIME_BALL
+     * @return Ingredient form of Items.COPPER_INGOT
      * @see Items
      */
-    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.SLIME_BALL); }
+    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.COPPER_INGOT); }
 
     /**
      * Fetches the name
      * @return A string representing material name
      */
-    @Override public String getName() { return "slime"; }
+    @Override public String getName() { return "copper"; }
 
     /**
      * Gets the toughness of this armor
