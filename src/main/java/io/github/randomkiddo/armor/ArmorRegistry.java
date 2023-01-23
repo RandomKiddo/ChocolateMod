@@ -91,30 +91,30 @@ public class ArmorRegistry {
     public static final Item CHOCOLATE_BOOTS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.FEET,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
-     * Emerald armor material instance
+     * Copper armor material instance
      */
     public static final ArmorMaterial COPPER_ARMOR_MATERIAL = new CopperMaterial();
     /**
-     * Physical emerald material
+     * Physical copper material
      */
     public static final Item COPPER_MATERIAL = Items.COPPER_INGOT;
     /**
-     * Emerald helmet item
+     * Copper helmet item
      */
     public static final Item COPPER_HELMET = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.HEAD,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Emerald chestplate item
+     * Copper chestplate item
      */
     public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.CHEST,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Emerald leggings item
+     * Copper leggings item
      */
     public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.LEGS,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Emerald boots item
+     * Copper boots item
      */
     public static final Item COPPER_BOOTS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.FEET,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
