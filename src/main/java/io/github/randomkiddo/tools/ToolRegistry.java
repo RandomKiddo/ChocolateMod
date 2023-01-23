@@ -22,14 +22,29 @@ public class ToolRegistry {
      * Foselium pickaxe instance
      */
     public static ToolItem FOSELIUM_PICKAXE = new FoseliumPickaxeItem(FoseliumMaterial.INSTANCE, 2, -2.8F, new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Chocolate shovel instance
+     */
     public static ToolItem CHOCOLATE_SHOVEL = new ShovelItem(ChocolateMaterial.INSTANCE, 1.5F, -3.0F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(6f).snack().build()));
+    /**
+     * Chocolate sword instance
+     */
     public static ToolItem CHOCOLATE_SWORD = new SwordItem(ChocolateMaterial.INSTANCE, 3, -2.4F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(10f).snack().build()));
+    /**
+     * Chocolate pickaxe instance
+     */
     public static ToolItem CHOCOLATE_PICKAXE = new ChocolatePickaxeItem(ChocolateMaterial.INSTANCE, 1, -2.8F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(12f).snack().build()));
+    /**
+     * Chocolate axe instance
+     */
     public static ToolItem CHOCOLATE_AXE = new ChocolateAxeItem(ChocolateMaterial.INSTANCE, 4, -3.2F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(12f).snack().build()));
+    /**
+     * Chocolate hoe instance
+     */
     public static ToolItem CHOCOLATE_HOE = new ChocolateHoeItem(ChocolateMaterial.INSTANCE, 1, -3.2F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(10f).snack().build()));
     /**

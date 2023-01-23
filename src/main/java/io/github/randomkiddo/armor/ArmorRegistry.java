@@ -91,6 +91,34 @@ public class ArmorRegistry {
     public static final Item CHOCOLATE_BOOTS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.FEET,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
     /**
+     * Copper armor material instance
+     */
+    public static final ArmorMaterial COPPER_ARMOR_MATERIAL = new CopperMaterial();
+    /**
+     * Physical copper material
+     */
+    public static final Item COPPER_MATERIAL = Items.COPPER_INGOT;
+    /**
+     * Copper helmet item
+     */
+    public static final Item COPPER_HELMET = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.HEAD,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper chestplate item
+     */
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.CHEST,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper leggings item
+     */
+    public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.LEGS,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper boots item
+     */
+    public static final Item COPPER_BOOTS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.FEET,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the items above
      * @see Registry
      */
@@ -104,5 +132,9 @@ public class ArmorRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_chestplate"), CHOCOLATE_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_leggings"), CHOCOLATE_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_boots"), CHOCOLATE_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_helmet"), COPPER_HELMET);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_chestplate"), COPPER_CHESTPLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_leggings"), COPPER_LEGGINGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_boots"), COPPER_BOOTS);
     }
 }
