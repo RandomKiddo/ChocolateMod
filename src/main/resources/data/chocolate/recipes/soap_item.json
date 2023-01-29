@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:charcoal" },
+    { "item": "minecraft:water_bucket" },
+    { "item": "minecraft:honeycomb" }
+  ],
+  "result": {
+    "item": "chocolate:soap",
+    "count": 2
+  }
+}

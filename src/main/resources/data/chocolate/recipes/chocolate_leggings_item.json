@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "C C",
+    "C C"
+  ],
+  "key": {
+    "E": {
+      "item": "chocolate:chocolate"
+    }
+  },
+  "result": {
+    "item": "chocolate:chocolate_leggings",
+    "count": 1
+  }
+}

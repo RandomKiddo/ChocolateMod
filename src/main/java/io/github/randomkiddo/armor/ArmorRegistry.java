@@ -4,19 +4,18 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.armor;
 
 import io.github.randomkiddo.Chocolate;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import static io.github.randomkiddo.chocolates.ChocolateRegistry.CHOCOLATE;
 
 /**
  * Registers all armor items
@@ -51,6 +50,75 @@ public class ArmorRegistry {
     public static final Item EMERALD_BOOTS = new ArmorItem(EMERALD_ARMOR_MATERIAL, EquipmentSlot.FEET,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
     /**
+     * Slime armor material instance
+     */
+    public static final ArmorMaterial SLIME_ARMOR_MATERIAL = new SlimeMaterial();
+    /**
+     * Physical slime material
+     */
+    public static final Item SLIME_MATERIAL = Items.SLIME_BALL;
+    /**
+     * Slime boots item
+     */
+    public static final Item SLIME_BOOTS = new ArmorItem(SLIME_ARMOR_MATERIAL, EquipmentSlot.FEET,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Chocolate armor material instance
+     */
+    public static final ArmorMaterial CHOCOLATE_ARMOR_MATERIAL = new ChocolateMaterial();
+    /**
+     * Physical chocolate material
+     */
+    public static final Item CHOCOLATE_MATERIAL = CHOCOLATE;
+    /**
+     * Chocolate helmet item
+     */
+    public static final Item CHOCOLATE_HELMET = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.HEAD,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
+    /**
+     * Chocolate chestplate item
+     */
+    public static final Item CHOCOLATE_CHESTPLATE = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.CHEST,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
+    /**
+     * Chocolate leggings item
+     */
+    public static final Item CHOCOLATE_LEGGINGS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.LEGS,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
+    /**
+     * Chocolate boots item
+     */
+    public static final Item CHOCOLATE_BOOTS = new ArmorItem(CHOCOLATE_ARMOR_MATERIAL, EquipmentSlot.FEET,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(10f).snack().build()));
+    /**
+     * Copper armor material instance
+     */
+    public static final ArmorMaterial COPPER_ARMOR_MATERIAL = new CopperMaterial();
+    /**
+     * Physical copper material
+     */
+    public static final Item COPPER_MATERIAL = Items.COPPER_INGOT;
+    /**
+     * Copper helmet item
+     */
+    public static final Item COPPER_HELMET = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.HEAD,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper chestplate item
+     */
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.CHEST,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper leggings item
+     */
+    public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.LEGS,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Copper boots item
+     */
+    public static final Item COPPER_BOOTS = new ArmorItem(COPPER_ARMOR_MATERIAL, EquipmentSlot.FEET,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the items above
      * @see Registry
      */
@@ -59,5 +127,14 @@ public class ArmorRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_chestplate"), EMERALD_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_leggings"), EMERALD_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "emerald_boots"), EMERALD_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "slime_boots"), SLIME_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_helmet"), CHOCOLATE_HELMET);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_chestplate"), CHOCOLATE_CHESTPLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_leggings"), CHOCOLATE_LEGGINGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_boots"), CHOCOLATE_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_helmet"), COPPER_HELMET);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_chestplate"), COPPER_CHESTPLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_leggings"), COPPER_LEGGINGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_boots"), COPPER_BOOTS);
     }
 }

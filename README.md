@@ -10,43 +10,105 @@ A FabricMC mod that enhances Vanilla Minecraft seamlessly
 [![pull requests](https://img.shields.io/github/issues-pr-raw/RandomKiddo/ChocolateMod?color=purple)](https://github.com/RandomKiddo/ChocolateMod/pulls)
 [![Requires Fabric API](https://i.imgur.com/Ol1Tcf8.png)](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 
+___
 
-Contributors: [RandomKiddo](https://github.com/RandomKiddo)
+For information on what this mod adds, see this repository's [wiki](https://github.com/RandomKiddo/Chocolate/wiki)
+
+___
+## Collaborators
+
+Below are all the amazing people who played a part in the creation of this mod (in no particular order).
 
 ___
 
-### Table of Contents
+### RandomKiddo
 
-1. [Rundown](#rundown)
+<sub>Lead Developer, Original Mod Creator, Texture Designer</sub>
+
+I am a Physics major at the Ohio State University. Regardless, I love programming, and have worked on a plethora of personal projects. 
+However, I wanted to work on something bigger, so I rounded up some of the most talented people I know (below), and merged my programming skills with Minecraft!
+On this project, I mainly do development work, but I do know how to texture as well. Outside of this, I'm an avid gamer, tennis player, musician, and language learner! 
+
+Years Active on Project: 2021-Present
+
+Copyrights Held: © 2021-2023
+
+[Profile Link](https://github.com/RandomKiddo)
 
 ___
 
-### Rundown
+### danield33
 
-A rundown of everything this mod changes
+<sub>Lead Developer</sub>
 
-\**coming soon*\* :fire:
+My name is Daniel, I'm a computer science engineering student at OSU. I like to program and do fun stuff.
 
-##### Armor:
+Years Active on Project: 2022-Present
 
-##### Blocks:
+Copyrights Held: © 2022-2023
 
-##### Chocolate:
+[Profile Link](https://github.com/danield33)
 
-##### Effects:
+___
 
-##### Enchants:
+### NithilB
 
-##### Fluids:
+<sub>Developer</sub>
 
-##### Mixins:
+Average Sigma Male Anime Consumer that Games Valorant and MC w/ the Bois
 
-##### Ores:
+Years Active on Project: 2023-Present
+
+Copyrights Held: © 2023
+
+[Profile Link](https://github.com/NithilB)
+
+___
+
+### pranavmoola
+
+<sub>Developer</sub>
+
+My name is Pranav Moola and I am a freshman majoring in electrical engineering at Ohio State University. I enjoy playing tennis, hanging out with friends/family, and biking nature trails. I joined the Chocolate Mod to learn fabric modding and to explore a new area of programming. I also joined it because chocolate ice cream is superior to vanilla.
+
+Years Active on Project: 2023-Present
+
+Copyrights Held: © 2023
+
+[Profile Link](https://github.com/pranavmoola)
+
+___
+
+### Mag1cmang0
+
+<sub>Lead Texture Designer, Junior Developer</sub>
+
+Enjoys playing tennis and gaming. Aerospace Engineer at the Ohio State University.
+
+Years Active on Project: 2022-Present
+
+Copyrights Held: © 2023
+
+[Profile Link](https://github.com/Mag1cmang0)
+
+___
+
+### Nickelboi
+
+<sub>Creative Director</sub>
+
+I am majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
+
+Years Active on Project: N/A
+
+Copyrights Held: None
+
+No Profile Link
 
 ___
 
 [Back to Top](#chocolate)
 
-<sub>This page was last edited on 12.12.2022</sub>
+<sub>This page was last edited on 01.19.2023 by `RandomKiddo`</sub>
 
 <sub>This repository's contents are licensed by the GNU GPLv3 License. See [LICENSE](https://github.com/RandomKiddo/ChocolateMod/blob/master/LICENSE) or [GNU GPLv3 Website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details</sub>

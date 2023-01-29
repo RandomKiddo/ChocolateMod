@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo;
@@ -12,10 +12,12 @@ package io.github.randomkiddo;
 import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
 import io.github.randomkiddo.chocolates.ChocolateRegistry;
+import io.github.randomkiddo.config.ConfigRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
 import io.github.randomkiddo.fluids.FluidRegistry;
+import io.github.randomkiddo.items.ItemRegistry;
 import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
 import io.github.randomkiddo.tools.ToolRegistry;
@@ -58,5 +60,7 @@ public class Chocolate implements ModInitializer {
 		TreeRegistry.register();
 		BiomeModificationsRegistry.register();
 		ToolRegistry.register();
+		ItemRegistry.register();
+		ConfigRegistry.register();
 	}
 }

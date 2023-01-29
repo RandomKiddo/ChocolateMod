@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.blocks;
@@ -96,14 +96,32 @@ public class BlockRegistry {
     public static final BlockItem CLOUD_PLANKS_ITEM = new BlockItem(
             CLOUD_PLANKS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Cloud Leaves Block
+     * Cloud Leaves Block (nonOpaque helps with rendering)
      */
-    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f));
+    public static final Block CLOUD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f).nonOpaque());
     /**
      * Cloud Leaves Block as an item
      */
     public static final BlockItem CLOUD_LEAVES_ITEM = new BlockItem(
             CLOUD_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Milk Chocolate Block
+     */
+    public static final Block MILK_CHOCOLATE = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 1.0f));
+    /**
+     * Milk Chocolate Block as an item
+     */
+    public static final BlockItem MILK_CHOCOLATE_ITEM = new BlockItem(
+            MILK_CHOCOLATE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Dark Chocolate Block
+     */
+    public static final Block DARK_CHOCOLATE = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 1.0f));
+    /**
+     * Dark Chocolate Block as an item
+     */
+    public static final BlockItem DARK_CHOCOLATE_ITEM = new BlockItem(
+            DARK_CHOCOLATE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Etherium Ore Block
      */
@@ -136,6 +154,10 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_planks"), CLOUD_PLANKS_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "cloud_leaves"), CLOUD_LEAVES_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "milk_chocolate"), MILK_CHOCOLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "milk_chocolate"), MILK_CHOCOLATE_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "dark_chocolate"), DARK_CHOCOLATE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "dark_chocolate"), DARK_CHOCOLATE_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able

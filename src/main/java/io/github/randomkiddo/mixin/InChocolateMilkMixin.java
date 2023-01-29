@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.mixin;
@@ -17,8 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in acid, and if so,
- * the entity is set to take damage
+ * InAcidMixin is a spongepowered mixin for Minecraft that detects if an entity is in chocolate, and kills the player
  *
  * Injected into <code>isTouchingWater</code> at <code>RETURN</code>
  * Non-cancellable
@@ -29,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * @see Entity
  */
 @Mixin(Entity.class)
-public class InAcidMixin {
+public class InChocolateMilkMixin {
     /**
      * Injects the specified code into isTouchingWater
      * @param cir The callback info of the method and its returned boolean value
@@ -39,8 +38,8 @@ public class InAcidMixin {
     private void mixin(CallbackInfoReturnable<Boolean> cir) {
         Entity entity = (Entity)(Object)this;
         String name = entity.getBlockStateAtPos().getBlock().getName().toString();
-        if (cir.getReturnValue() && name.contains("block.chocolate.acid")) {
-            entity.damage(DamageSource.LAVA, 15.0f);
+        if (cir.getReturnValue() && name.contains("block.chocolate.chocolate_milk")) {
+            entity.damage(DamageSource.FALLING_STALACTITE, 100.0f);
         }
     }
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    " SC",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "chocolate:chocolate"
+    }
+  },
+  "result": {
+    "item": "chocolate:chocolate_axe",
+    "count": 1
+  }
+}
