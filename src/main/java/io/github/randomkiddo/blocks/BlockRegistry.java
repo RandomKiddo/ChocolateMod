@@ -123,6 +123,15 @@ public class BlockRegistry {
     public static final BlockItem DARK_CHOCOLATE_ITEM = new BlockItem(
             DARK_CHOCOLATE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
+     * Etherium Ore Block
+     */
+    public static final Block ETHERIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f));
+    /**
+     * Etherium Ore Block as an item
+     */
+    public static final BlockItem ETHERIUM_ORE_ITEM = new BlockItem(
+            ETHERIUM_ORE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the blocks and items above
      * @see Registry
      */
@@ -149,6 +158,8 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "milk_chocolate"), MILK_CHOCOLATE_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "dark_chocolate"), DARK_CHOCOLATE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "dark_chocolate"), DARK_CHOCOLATE_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
     }
