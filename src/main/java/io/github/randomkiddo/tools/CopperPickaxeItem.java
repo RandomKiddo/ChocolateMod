@@ -14,19 +14,26 @@ import net.minecraft.item.ToolMaterial;
 
 /**
  * Since PickaxeItem's constructor is not public, this class extends the PickaxeItem class
- * to provide a constructor for the custom chocolate pickaxe item
+ * to provide a constructor for the custom copper pickaxe item
  *
  * @see PickaxeItem
  */
-public class ChocolatePickaxeItem extends PickaxeItem {
+public class CopperPickaxeItem extends PickaxeItem {
+    private boolean isCharged;
+    public int swingsLeft;
     /**
-     * Instantiates a new chocolate pickaxe item
+     * Instantiates a new copper pickaxe item
      * @param material The tool material
      * @param attackDamage The attack damage the item does
      * @param attackSpeed The attack speed of the item
      * @param settings Related item settings
      */
-    public ChocolatePickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+    public CopperPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
+        this.isCharged = false;
+        this.swingsLeft = 5;
     }
+    public void setCharged(boolean b) { this.isCharged = b; }
+    public void reset() { this.isCharged = false; }
+    public boolean isCharged() { return this.isCharged; }
 }

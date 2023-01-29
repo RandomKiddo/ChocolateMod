@@ -9,6 +9,8 @@
 
 package io.github.randomkiddo.mixin;
 
+import io.github.randomkiddo.tools.CopperPickaxeItem;
+import io.github.randomkiddo.tools.CopperSwordItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -22,6 +24,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static io.github.randomkiddo.tools.ToolRegistry.COPPER_PICKAXE;
+import static io.github.randomkiddo.tools.ToolRegistry.COPPER_SWORD;
 
 /**
  * PlayerFallDamageMixin is a spongepowered mixin for Minecraft that checks when the user takes damage
@@ -60,20 +65,32 @@ public class PlayerDamageMixin {
                 }
             });
         } else if (source.equals(DamageSource.LIGHTNING_BOLT)) {
+            int copperSlots = 0;
             for (ItemStack item : player.getArmorItems()) {
-                if (!item.toString().contains("copper_")) { return; }
+                if (item.toString().toLowerCase().contains("copper")) { ++copperSlots; }
             }
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 15*20));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 15*20, 2));
-            final EquipmentSlot[] slots = { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
-            AtomicInteger slot = new AtomicInteger();
-            for (ItemStack item : player.getArmorItems()) {
-                item.damage(10, player, p -> {
-                    p.sendEquipmentBreakStatus(slots[slot.get()]);
-                    slot.incrementAndGet();
-                });
+            if (copperSlots == 0) { return; }
+            else if (copperSlots == 4) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 15 * 20));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 15 * 20, 2));
+                final EquipmentSlot[] slots = {EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
+                AtomicInteger slot = new AtomicInteger();
+                for (ItemStack item : player.getArmorItems()) {
+                    item.damage(5, player, p -> {
+                        p.sendEquipmentBreakStatus(slots[slot.get()]);
+                        slot.incrementAndGet();
+                    });
+                }
+                cir.cancel();
+            } else {
+                player.damage(DamageSource.GENERIC, amount-copperSlots);
+                cir.cancel();
             }
-            cir.cancel();
+            if (player.getInventory().getMainHandStack().toString().contains("copper_sword")) {
+                ((CopperSwordItem)(player.getInventory().getMainHandStack().getItem())).setCharged(true);
+            } else if (player.getInventory().getMainHandStack().toString().contains("copper_pickaxe")) {
+                ((CopperPickaxeItem)(player.getInventory().getMainHandStack().getItem())).setCharged(true);
+            }
         }
     }
 }
