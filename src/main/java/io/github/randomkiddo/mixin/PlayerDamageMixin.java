@@ -42,6 +42,7 @@ import static io.github.randomkiddo.tools.ToolRegistry.COPPER_SWORD;
  */
 @Mixin(PlayerEntity.class)
 public class PlayerDamageMixin {
+    private long lastStrike = 0;
     /**
      * Injects the specified code into damage method
      * @param source The damage source
@@ -65,6 +66,10 @@ public class PlayerDamageMixin {
                 }
             });
         } else if (source.equals(DamageSource.LIGHTNING_BOLT)) {
+            if (System.currentTimeMillis() - this.lastStrike < 1000) {
+                return;
+            }
+            this.lastStrike = System.currentTimeMillis();
             int copperSlots = 0;
             for (ItemStack item : player.getArmorItems()) {
                 if (item.toString().toLowerCase().contains("copper")) { ++copperSlots; }
@@ -91,6 +96,7 @@ public class PlayerDamageMixin {
             } else if (player.getInventory().getMainHandStack().toString().contains("copper_pickaxe")) {
                 ((CopperPickaxeItem)(player.getInventory().getMainHandStack().getItem())).setCharged(true);
             }
+            System.out.println("Done");
         }
     }
 }

@@ -38,6 +38,9 @@ public class PlayerSwingMixin {
         CopperSwordItem csi = null;
         try {
             csi = (CopperSwordItem)(pe.getMainHandStack().getItem());
+            System.out.println(csi.isCharged());
+            System.out.println(csi.swingsLeft);
+            System.out.println(csi.canSwing());
         } catch(ClassCastException ccerr) {
             /* do nothing */
         }
@@ -46,7 +49,7 @@ public class PlayerSwingMixin {
             LightningEntity le = new LightningEntity(EntityType.LIGHTNING_BOLT, pe.getWorld());
             le.setPosition(entity.getPos());
             pe.getWorld().spawnEntity(le);
-            if (csi.swingsLeft == 0) { csi.setCharged(false); csi.swingsLeft = 5; }
+            if (csi.swingsLeft == 0) { csi.setCharged(false); csi.swingsLeft = 3; }
             csi.lastSwing = System.currentTimeMillis();
         }
     }
