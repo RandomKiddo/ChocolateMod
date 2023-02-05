@@ -30,9 +30,9 @@ public class CopperMaterial implements ToolMaterial {
 
     /**
      * The durability of the material
-     * @return The value 200
+     * @return The value 50
      */
-    @Override public int getDurability() { return 200; }
+    @Override public int getDurability() { return 50; }
 
     /**
      * Gets the mining speed multiplier for this material

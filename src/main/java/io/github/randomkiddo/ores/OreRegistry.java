@@ -64,7 +64,7 @@ public class OreRegistry {
      */
     private static ConfiguredFeature<?, ?> ETHERIUM_ORE_CONFIGURED_FEATURE = new ConfiguredFeature<>(
             Feature.ORE, new OreFeatureConfig(
-            new BlockMatchRuleTest(Blocks.END_STONE),
+            new BlockMatchRuleTest(Blocks.STONE),
             BlockRegistry.ETHERIUM_ORE.getDefaultState(), 9
     ));
     /**
@@ -77,18 +77,9 @@ public class OreRegistry {
             Arrays.asList(
                     CountPlacementModifier.of(2),
                     SquarePlacementModifier.of(),
-                    HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(80))
+                    HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(64))
             )
     );
-
-
-
-
-
-
-
-
-
     /**
      * Registers all the ore features above
      * @see Registry

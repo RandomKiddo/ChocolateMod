@@ -9,18 +9,27 @@
 
 package io.github.randomkiddo.tools;
 
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 /**
  * Makes custom behavior for a copper sword
  *
- * @see PickaxeItem
+ * @see SwordItem
  */
-public class CopperSwordItem extends PickaxeItem {
+public class CopperSwordItem extends SwordItem {
+    /**
+     * If the sword is charged
+     */
     private boolean isCharged;
-    public int swingsLeft;
-    public long lastSwing;
+    /**
+     * Charged swings left
+     */
+    public int swingsLeft = 3;
     /**
      * Instantiates a new copper sword item
      * @param material The tool material
@@ -32,10 +41,34 @@ public class CopperSwordItem extends PickaxeItem {
         super(material, attackDamage, attackSpeed, settings);
         this.isCharged = false;
         this.swingsLeft = 3;
-        this.lastSwing = 0;
     }
+
+    /**
+     * Set charge status
+     * @param b Charge boolean
+     */
     public void setCharged(boolean b) { this.isCharged = b; }
-    public void reset() { this.isCharged = false; }
-    public boolean isCharged() { return this.isCharged; }
-    public boolean canSwing() { return this.lastSwing == 0 || System.currentTimeMillis() - this.lastSwing >= 625; }
+
+    /**
+     * Reset the sword
+     */
+    public void reset() { this.isCharged = false; this.swingsLeft = 3; }
+
+    /**
+     * Strike with lightning post hit
+     * @param stack The item
+     * @param target The entity target
+     * @param attacker The entity attacker
+     * @return Result boolean
+     */
+    @Override public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (this.isCharged && this.swingsLeft > 0) {
+            LightningEntity le = new LightningEntity(EntityType.LIGHTNING_BOLT, attacker.getWorld());
+            le.setPosition(target.getPos());
+            attacker.getWorld().spawnEntity(le);
+            --this.swingsLeft;
+        }
+        if (this.swingsLeft == 0) { this.reset(); }
+        return super.postHit(stack, target, attacker);
+    }
 }
