@@ -48,6 +48,16 @@ public class ToolRegistry {
     public static ToolItem CHOCOLATE_HOE = new ChocolateHoeItem(ChocolateMaterial.INSTANCE, 1, -3.2F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(10f).snack().build()));
     /**
+     * Chocolate sword instance
+     */
+    public static ToolItem COPPER_SWORD = new CopperSwordItem(CopperMaterial.INSTANCE, 3, -2.4F,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Chocolate pickaxe instance
+     */
+    public static ToolItem COPPER_PICKAXE = new CopperPickaxeItem(CopperMaterial.INSTANCE, 1, -2.8F,
+            new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the tool instances above
      * @see Registry
      */
@@ -58,5 +68,7 @@ public class ToolRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_pickaxe"), CHOCOLATE_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_axe"), CHOCOLATE_AXE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_hoe"), CHOCOLATE_HOE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_pickaxe"), COPPER_PICKAXE);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_sword"), COPPER_SWORD);
     }
 }

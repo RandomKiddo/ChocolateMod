@@ -23,6 +23,9 @@
     ],
     "client": [
       "io.github.randomkiddo.ChocolateClient"
+    ],
+    "terrablender": [
+      "io.github.randomkiddo.Chocolate"
     ]
   },
   "mixins": [

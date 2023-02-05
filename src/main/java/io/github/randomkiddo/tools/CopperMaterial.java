@@ -9,23 +9,24 @@
 
 package io.github.randomkiddo.tools;
 
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 import static io.github.randomkiddo.chocolates.ChocolateRegistry.CHOCOLATE;
 
 /**
- * Allows for chocolate to be used as a tool material
+ * Allows for copper to be used as a tool material
  *
  * Implements all required methods in ToolMaterial
  *
  * @see ToolMaterial
  */
-public class ChocolateMaterial implements ToolMaterial {
+public class CopperMaterial implements ToolMaterial {
     /**
      * The public use-case instance of the material
      */
-    public static final ChocolateMaterial INSTANCE = new ChocolateMaterial();
+    public static final CopperMaterial INSTANCE = new CopperMaterial();
 
     /**
      * The durability of the material
@@ -35,9 +36,9 @@ public class ChocolateMaterial implements ToolMaterial {
 
     /**
      * Gets the mining speed multiplier for this material
-     * @return The value 2.0F
+     * @return The value 3.0F
      */
-    @Override public float getMiningSpeedMultiplier() { return 2.0F; }
+    @Override public float getMiningSpeedMultiplier() { return 3.0F; }
 
     /**
      * Gets the attack damage for this material
@@ -47,20 +48,20 @@ public class ChocolateMaterial implements ToolMaterial {
 
     /**
      * Gets the mining level for this material
-     * @return The value 1
+     * @return The value 2
      */
-    @Override public int getMiningLevel() { return 1; }
+    @Override public int getMiningLevel() { return 2; }
 
     /**
      * Gets the enchantability of this material
-     * @return The value 8
+     * @return The value 6
      */
-    @Override public int getEnchantability() { return 8; }
+    @Override public int getEnchantability() { return 6; }
 
     /**
      * Gets the repair ingredient for the material
      * @return The repair ingredient of the item
      * @see Ingredient
      */
-    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(CHOCOLATE); }
+    @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.COPPER_INGOT); }
 }

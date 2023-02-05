@@ -25,16 +25,20 @@ import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
 import io.github.randomkiddo.worldgen.TreeRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import terrablender.api.TerraBlenderApi;
+import terrablender.config.TerraBlenderConfig;
+import terrablender.core.TerraBlender;
 
 /**
  * This class registers and initializes the entire mod. It is called internally by the Fabric API.
  * @see ModInitializer
  */
-public class Chocolate implements ModInitializer {
+public class Chocolate implements ModInitializer, TerraBlenderApi {
 	/**
 	 * Builds an ItemGroup for this mod
 	 * @see ItemGroup
@@ -43,6 +47,7 @@ public class Chocolate implements ModInitializer {
 			new Identifier("chocolate", "chocolate_group"))
 			.icon(() -> new ItemStack(Items.COCOA_BEANS))
 			.build();
+	private static final TerraBlenderConfig CONFIG = new TerraBlenderConfig(FabricLoader.getInstance().getConfigDir().resolve("terrablender.toml"));
 
 	/**
 	 * Initializes the mod
@@ -62,5 +67,14 @@ public class Chocolate implements ModInitializer {
 		ToolRegistry.register();
 		ItemRegistry.register();
 		ConfigRegistry.register();
+
+		TerraBlender.setConfig(CONFIG);
+	}
+
+	/**
+	 * Initializes TerraBlender (WIP)
+	 */
+	@Override public void onTerraBlenderInitialized() {
+		TerraBlenderApi.super.onTerraBlenderInitialized();
 	}
 }
