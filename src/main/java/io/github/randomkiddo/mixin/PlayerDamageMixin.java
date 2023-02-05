@@ -9,7 +9,6 @@
 
 package io.github.randomkiddo.mixin;
 
-import io.github.randomkiddo.tools.CopperPickaxeItem;
 import io.github.randomkiddo.tools.CopperSwordItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.damage.DamageSource;
@@ -24,9 +23,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.concurrent.atomic.AtomicInteger;
-
-import static io.github.randomkiddo.tools.ToolRegistry.COPPER_PICKAXE;
-import static io.github.randomkiddo.tools.ToolRegistry.COPPER_SWORD;
 
 /**
  * PlayerFallDamageMixin is a spongepowered mixin for Minecraft that checks when the user takes damage
@@ -88,8 +84,6 @@ public class PlayerDamageMixin {
             }
             if (player.getInventory().getMainHandStack().toString().contains("copper_sword")) {
                 ((CopperSwordItem)(player.getInventory().getMainHandStack().getItem())).setCharged(true);
-            } else if (player.getInventory().getMainHandStack().toString().contains("copper_pickaxe")) {
-                ((CopperPickaxeItem)(player.getInventory().getMainHandStack().getItem())).setCharged(true);
             }
         }
     }

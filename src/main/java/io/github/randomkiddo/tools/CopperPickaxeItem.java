@@ -19,8 +19,6 @@ import net.minecraft.item.ToolMaterial;
  * @see PickaxeItem
  */
 public class CopperPickaxeItem extends PickaxeItem {
-    private boolean isCharged;
-    public int swingsLeft;
     /**
      * Instantiates a new copper pickaxe item
      * @param material The tool material
@@ -30,10 +28,5 @@ public class CopperPickaxeItem extends PickaxeItem {
      */
     public CopperPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
-        this.isCharged = false;
-        this.swingsLeft = 5;
     }
-    public void setCharged(boolean b) { this.isCharged = b; }
-    public void reset() { this.isCharged = false; }
-    public boolean isCharged() { return this.isCharged; }
 }
