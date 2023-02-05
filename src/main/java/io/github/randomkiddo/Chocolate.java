@@ -23,6 +23,8 @@ import io.github.randomkiddo.ores.OreRegistry;
 import io.github.randomkiddo.tools.ToolRegistry;
 import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
 import io.github.randomkiddo.worldgen.TreeRegistry;
+import io.github.randomkiddo.worldgen.biome.BiomeRegistry;
+import io.github.randomkiddo.worldgen.biome.CloudForestRegion;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -30,6 +32,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import terrablender.api.RegionType;
+import terrablender.api.Regions;
 import terrablender.api.TerraBlenderApi;
 import terrablender.config.TerraBlenderConfig;
 import terrablender.core.TerraBlender;
@@ -67,14 +71,16 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		ToolRegistry.register();
 		ItemRegistry.register();
 		ConfigRegistry.register();
+		BiomeRegistry.register();
 
 		TerraBlender.setConfig(CONFIG);
 	}
 
 	/**
-	 * Initializes TerraBlender (WIP)
+	 * Initializes TerraBlender
 	 */
 	@Override public void onTerraBlenderInitialized() {
 		TerraBlenderApi.super.onTerraBlenderInitialized();
+		Regions.register(new CloudForestRegion(new Identifier("chocolate", "cloud_forest"), RegionType.OVERWORLD, 2));
 	}
 }
