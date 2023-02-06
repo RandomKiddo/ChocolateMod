@@ -14,7 +14,13 @@ import net.minecraft.util.registry.Registry;
 
 import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.CLOUD_FOREST_KEY;
 
+/**
+ * Registers all biomes for the mod
+ */
 public class BiomeRegistry {
+    /**
+     * Physically registers the custom biomes
+     */
     public static void register() {
         Registry.register(BuiltinRegistries.BIOME, CLOUD_FOREST_KEY, OverworldBiomes.cloudForest());
     }

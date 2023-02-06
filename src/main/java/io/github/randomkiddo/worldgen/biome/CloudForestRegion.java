@@ -23,11 +23,26 @@ import java.util.function.Consumer;
 
 import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.CLOUD_FOREST_KEY;
 
+/**
+ * Creates a custom region that contains the cloud forest
+ * @see Region
+ */
 public class CloudForestRegion extends Region {
+    /**
+     * Constructor for the cloud forest region
+     * @param id The identifier
+     * @param type The region type (dimension)
+     * @param weight The percentage weight for the region
+     */
     public CloudForestRegion(Identifier id, RegionType type, int weight) {
         super(id, type, weight);
     }
 
+    /**
+     * Adds the biomes to the region
+     * @param registry The biome registry entry
+     * @param mapper The mapping consumer
+     */
     @Override public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             builder.replaceBiome(BiomeKeys.DESERT, CLOUD_FOREST_KEY);

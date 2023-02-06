@@ -9,10 +9,6 @@
 
 package io.github.randomkiddo.worldgen.biome;
 
-import net.minecraft.network.PacketByteBuf;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -23,8 +19,20 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 import static io.github.randomkiddo.worldgen.TreeRegistry.CLOUD_TREE_PLACED_FEATURE;
 
+/**
+ * Contains all methods and registry keys for custom biomes
+ */
 public class OverworldBiomes {
+    /**
+     * Cloud forest registry key
+     */
     public static final RegistryKey<Biome> CLOUD_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("chocolate", "cloud_forest"));
+
+    /**
+     * The cloud forest biome
+     * @return Biome instance of the cloud forest
+     * @see Biome
+     */
     public static Biome cloudForest() {
         SpawnSettings.Builder spawnSettings = new SpawnSettings.Builder();
         DefaultBiomeFeatures.addFarmAnimals(spawnSettings);
