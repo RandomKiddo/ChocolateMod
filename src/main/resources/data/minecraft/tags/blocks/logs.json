@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "chocolate:cloud_logs"
+    "chocolate:cloud_logs",
+    "chocolate:pink_cherry_logs"
   ]
 }

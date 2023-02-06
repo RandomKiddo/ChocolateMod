@@ -22,7 +22,7 @@ import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
 import io.github.randomkiddo.tools.ToolRegistry;
 import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
-import io.github.randomkiddo.worldgen.TreeRegistry;
+import io.github.randomkiddo.worldgen.trees.TreeRegistry;
 import io.github.randomkiddo.worldgen.biome.BiomeRegistry;
 import io.github.randomkiddo.worldgen.biome.CloudForestRegion;
 import net.fabricmc.api.ModInitializer;

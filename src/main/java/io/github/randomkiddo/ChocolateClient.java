@@ -15,19 +15,16 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.fluid.LavaFluid;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
 
-import static io.github.randomkiddo.blocks.BlockRegistry.CLOUD_LEAVES;
-import static io.github.randomkiddo.fluids.FluidRegistry.CHOCOLATE_MILK;
+import static io.github.randomkiddo.blocks.BlockRegistry.*;
 import static io.github.randomkiddo.fluids.FluidRegistry.STILL_CHOCOLATE_MILK;
-import static io.github.randomkiddo.worldgen.TreeRegistry.CLOUD_SAPLING;
+import static io.github.randomkiddo.worldgen.trees.TreeRegistry.*;
 
 /**
  * This class registers and initializes the entire mod's client-side. It is called internally by the Fabric API.
@@ -49,8 +46,12 @@ public class ChocolateClient implements ClientModInitializer {
         ); //Register client-side of acid fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_ACID, FluidRegistry.FLOWING_ACID);
         BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout()); // Register cloud sapling rendering
+        BlockRenderLayerMap.INSTANCE.putBlock(PINK_CHERRY_SAPLING, RenderLayer.getCutout()); // Register pink cherry sapling rendering
+        BlockRenderLayerMap.INSTANCE.putBlock(WHITE_CHERRY_SAPLING, RenderLayer.getCutout()); // Register white cherry sapling rendering
         if (!ConfigRegistry.USING_FAST_GRAPHICS) {
             BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
+            BlockRenderLayerMap.INSTANCE.putBlock(PINK_CHERRY_LEAVES, RenderLayer.getCutout()); // Register pink cherry leaves rendering
+            BlockRenderLayerMap.INSTANCE.putBlock(WHITE_CHERRY_LEAVES, RenderLayer.getCutout()); // Register white cherry leaves rendering
         }
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
             registry.register(new Identifier("chocolate:block/chocolate_milk_still"));

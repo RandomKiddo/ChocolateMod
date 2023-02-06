@@ -132,6 +132,60 @@ public class BlockRegistry {
     public static final BlockItem ETHERIUM_ORE_ITEM = new BlockItem(
             ETHERIUM_ORE, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
+     * Pink Cherry Logs Block
+     */
+    public static final Block PINK_CHERRY_LOGS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
+    /**
+     * Pink Cherry Logs Block as an item
+     */
+    public static final BlockItem PINK_CHERRY_LOGS_ITEM = new BlockItem(
+            PINK_CHERRY_LOGS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Pink Cherry Planks Block
+     */
+    public static final Block PINK_CHERRY_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
+    /**
+     * Pink Cherry Planks Block as an item
+     */
+    public static final BlockItem PINK_CHERRY_PLANKS_ITEM = new BlockItem(
+            PINK_CHERRY_PLANKS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * Pink Cherry Leaves Block (nonOpaque helps with rendering)
+     */
+    public static final Block PINK_CHERRY_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f).nonOpaque());
+    /**
+     * Pink Cherry Leaves Block as an item
+     */
+    public static final BlockItem PINK_CHERRY_LEAVES_ITEM = new BlockItem(
+            PINK_CHERRY_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * White Cherry Logs Block
+     */
+    public static final Block WHITE_CHERRY_LOGS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
+    /**
+     * White Cherry Logs Block as an item
+     */
+    public static final BlockItem WHITE_CHERRY_LOGS_ITEM = new BlockItem(
+            WHITE_CHERRY_LOGS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * White Cherry Planks Block
+     */
+    public static final Block WHITE_CHERRY_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
+    /**
+     * White Cherry Planks Block as an item
+     */
+    public static final BlockItem WHITE_CHERRY_PLANKS_ITEM = new BlockItem(
+            WHITE_CHERRY_PLANKS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
+     * White Cherry Leaves Block (nonOpaque helps with rendering)
+     */
+    public static final Block WHITE_CHERRY_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f, 0.2f).nonOpaque());
+    /**
+     * White Cherry Leaves Block as an item
+     */
+    public static final BlockItem WHITE_CHERRY_LEAVES_ITEM = new BlockItem(
+            WHITE_CHERRY_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    /**
      * Registers all the blocks and items above
      * @see Registry
      */
@@ -160,6 +214,18 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "dark_chocolate"), DARK_CHOCOLATE_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "etherium_ore"), ETHERIUM_ORE_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "pink_cherry_logs"), PINK_CHERRY_LOGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "pink_cherry_logs"), PINK_CHERRY_LOGS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "pink_cherry_planks"), PINK_CHERRY_PLANKS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "pink_cherry_planks"), PINK_CHERRY_PLANKS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "pink_cherry_leaves"), PINK_CHERRY_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "pink_cherry_leaves"), PINK_CHERRY_LEAVES_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_logs"), WHITE_CHERRY_LOGS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_logs"), WHITE_CHERRY_LOGS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_planks"), WHITE_CHERRY_PLANKS);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_planks"), WHITE_CHERRY_PLANKS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
     }

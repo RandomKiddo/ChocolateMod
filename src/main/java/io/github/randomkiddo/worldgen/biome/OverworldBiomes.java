@@ -17,7 +17,7 @@ import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
-import static io.github.randomkiddo.worldgen.TreeRegistry.CLOUD_TREE_PLACED_FEATURE;
+import static io.github.randomkiddo.worldgen.trees.TreeRegistry.CLOUD_TREE_PLACED_FEATURE;
 
 /**
  * Contains all methods and registry keys for custom biomes

@@ -76,5 +76,21 @@
   "item.chocolate.copper_leggings": "Copper Leggings",
   "item.chocolate.copper_boots": "Copper Boots",
   "item.chocolate.copper_pickaxe": "Copper Pickaxe",
-  "item.chocolate.copper_sword": "Copper Sword"
+  "item.chocolate.copper_sword": "Copper Sword",
+  "block.chocolate.pink_cherry_sapling": "Pink Cherry Sapling",
+  "item.chocolate.pink_cherry_sapling": "Pink Cherry Sapling",
+  "block.chocolate.pink_cherry_logs": "Pink Cherry Log",
+  "item.chocolate.pink_cherry_logs": "Pink Cherry Log",
+  "block.chocolate.pink_cherry_planks": "Pink Cherry Planks",
+  "item.chocolate.pink_cherry_planks": "Pink Cherry Planks",
+  "block.chocolate.pink_cherry_leaves": "Pink Cherry Leaves",
+  "item.chocolate.pink_cherry_leaves": "Pink Cherry Leaves",
+  "block.chocolate.white_cherry_sapling": "White Cherry Sapling",
+  "item.chocolate.white_cherry_sapling": "White Cherry Sapling",
+  "block.chocolate.white_cherry_logs": "White Cherry Log",
+  "item.chocolate.white_cherry_logs": "White Cherry Log",
+  "block.chocolate.white_cherry_planks": "White Cherry Planks",
+  "item.chocolate.white_cherry_planks": "White Cherry Planks",
+  "block.chocolate.white_cherry_leaves": "White Cherry Leaves",
+  "item.chocolate.white_cherry_leaves": "White Cherry Leaves"
 }
