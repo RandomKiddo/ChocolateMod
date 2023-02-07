@@ -17,7 +17,7 @@ import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
-import static io.github.randomkiddo.worldgen.trees.TreeRegistry.CLOUD_TREE_PLACED_FEATURE;
+import static io.github.randomkiddo.worldgen.trees.TreeRegistry.*;
 
 /**
  * Contains all methods and registry keys for custom biomes
@@ -27,7 +27,10 @@ public class OverworldBiomes {
      * Cloud forest registry key
      */
     public static final RegistryKey<Biome> CLOUD_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("chocolate", "cloud_forest"));
-
+    /**
+     * Cherry blossom forest registry key
+     */
+    public static final RegistryKey<Biome> CHERRY_BLOSSOM_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("chocolate", "cherry_blossom_forest"));
     /**
      * The cloud forest biome
      * @return Biome instance of the cloud forest
@@ -65,6 +68,37 @@ public class OverworldBiomes {
                         .foliageColor(2469925)
                         .grassColor(1938973)
                         .skyColor(0x2cb6f6)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .build()
+                )
+                .spawnSettings(spawnSettings.build())
+                .generationSettings(generationSettings.build())
+                .build();
+    }
+    public static Biome cherryBlossomForest() {
+        SpawnSettings.Builder spawnSettings = new SpawnSettings.Builder();
+        DefaultBiomeFeatures.addFarmAnimals(spawnSettings);
+        GenerationSettings.Builder generationSettings = new GenerationSettings.Builder();
+        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, PINK_CHERRY_TREE_PLACED_FEATURE);
+        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, WHITE_CHERRY_TREE_PLACED_FEATURE);
+        DefaultBiomeFeatures.addAmethystGeodes(generationSettings);;
+        DefaultBiomeFeatures.addDefaultOres(generationSettings);
+        DefaultBiomeFeatures.addForestFlowers(generationSettings);
+        DefaultBiomeFeatures.addForestGrass(generationSettings);
+        DefaultBiomeFeatures.addDefaultVegetation(generationSettings);
+        DefaultBiomeFeatures.addLandCarvers(generationSettings);
+        DefaultBiomeFeatures.addSprings(generationSettings);
+        return (new Biome.Builder())
+                .precipitation(Biome.Precipitation.SNOW)
+                .temperature(.6f)
+                .downfall(.01f)
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x274db4)
+                        .waterFogColor(0x274db4)
+                        .fogColor(0xfec9ff)
+                        .foliageColor(0x257103)
+                        .grassColor(0x257103)
+                        .skyColor(0x73aeff)
                         .moodSound(BiomeMoodSound.CAVE)
                         .build()
                 )
