@@ -116,9 +116,9 @@ public class TreeRegistry {
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> WHITE_CHERRY_TREE = ConfiguredFeatures.register("chocolate:white_cherry_tree", Feature.TREE,
             new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(BlockRegistry.WHITE_CHERRY_LOGS),
-                    new StraightTrunkPlacer(6, 3, 0),
+                    new ForkingTrunkPlacer(4, 3, 0),
                     BlockStateProvider.of(BlockRegistry.WHITE_CHERRY_LEAVES),
-                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(0), ConstantIntProvider.create(3), 3),
+                    new AcaciaFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1)),
                     new TwoLayersFeatureSize(1, 0, 1)
             ).build()
     );
