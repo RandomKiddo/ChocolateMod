@@ -75,6 +75,12 @@ public class OverworldBiomes {
                 .generationSettings(generationSettings.build())
                 .build();
     }
+
+    /**
+     * The cherry blossom forest biome
+     * @return Biome instance of the cherry blossom forest
+     * @see Biome
+     */
     public static Biome cherryBlossomForest() {
         SpawnSettings.Builder spawnSettings = new SpawnSettings.Builder();
         DefaultBiomeFeatures.addFarmAnimals(spawnSettings);
