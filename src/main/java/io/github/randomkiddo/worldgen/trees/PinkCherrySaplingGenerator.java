@@ -7,7 +7,7 @@
  * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
-package io.github.randomkiddo.worldgen;
+package io.github.randomkiddo.worldgen.trees;
 
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.random.Random;
@@ -17,11 +17,11 @@ import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Gets the cloud tree feature and its sapling
+ * Gets the pink cherry tree feature and its sapling
  *
  * @see SaplingGenerator
  */
-public class CloudSaplingGenerator extends SaplingGenerator {
+public class PinkCherrySaplingGenerator extends SaplingGenerator {
     /**
      * Fetches the tree RegistryEntry feature
      * @param random A random
@@ -32,6 +32,6 @@ public class CloudSaplingGenerator extends SaplingGenerator {
      * @see TreeFeatureConfig
      */
     @Nullable @Override protected RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> getTreeFeature(Random random, boolean bees) {
-        return TreeRegistry.CLOUD_TREE;
+        return TreeRegistry.PINK_CHERRY_TREE;
     }
 }

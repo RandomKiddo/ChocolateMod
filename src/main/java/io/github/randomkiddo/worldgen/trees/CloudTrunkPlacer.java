@@ -7,7 +7,7 @@
  * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
-package io.github.randomkiddo.worldgen;
+package io.github.randomkiddo.worldgen.trees;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
