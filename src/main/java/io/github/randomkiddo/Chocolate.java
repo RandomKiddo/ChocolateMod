@@ -22,10 +22,11 @@ import io.github.randomkiddo.ores.IngotRegistry;
 import io.github.randomkiddo.ores.OreRegistry;
 import io.github.randomkiddo.tools.ToolRegistry;
 import io.github.randomkiddo.worldgen.BiomeModificationsRegistry;
-import io.github.randomkiddo.worldgen.biome.CherryBlossomForestRegion;
+import io.github.randomkiddo.worldgen.biome.region.CherryBlossomForestRegion;
+import io.github.randomkiddo.worldgen.biome.region.NetherReactorLeftoverRegion;
 import io.github.randomkiddo.worldgen.trees.TreeRegistry;
 import io.github.randomkiddo.worldgen.biome.BiomeRegistry;
-import io.github.randomkiddo.worldgen.biome.CloudForestRegion;
+import io.github.randomkiddo.worldgen.biome.region.CloudForestRegion;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -84,5 +85,6 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		TerraBlenderApi.super.onTerraBlenderInitialized();
 		Regions.register(new CloudForestRegion(new Identifier("chocolate", "cloud_forest"), RegionType.OVERWORLD, 2));
 		Regions.register(new CherryBlossomForestRegion(new Identifier("chocolate", "cherry_blossom_forest"), RegionType.OVERWORLD, 2));
+		Regions.register(new NetherReactorLeftoverRegion(new Identifier("chocolate", "nether_reactor_leftover"), RegionType.OVERWORLD, 2));
 	}
 }
