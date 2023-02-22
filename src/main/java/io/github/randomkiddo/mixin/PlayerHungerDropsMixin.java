@@ -26,7 +26,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  * loses hunger, and runs specified code
  *
  * Injected into <code>update</code> at <code>TAIL</code>
- * Cancellable (required)
  *
  * @see Mixin
  * @see Inject
@@ -35,6 +34,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Mixin(HungerManager.class)
 public class PlayerHungerDropsMixin {
+    /**
+     * Injects the specified code into update
+     * @param player The player entity
+     * @param ci The callback info of the method
+     * @see PlayerEntity
+     */
     @Inject(method="update(Lnet/minecraft/entity/player/PlayerEntity;)V", at=@At("TAIL"))
     private void mixin(PlayerEntity player, CallbackInfo ci) {
         HungerManager manager = (HungerManager)(Object)this;
