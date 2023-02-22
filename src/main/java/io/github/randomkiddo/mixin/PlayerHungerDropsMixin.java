@@ -46,6 +46,7 @@ public class PlayerHungerDropsMixin {
         final EquipmentSlot[] slots = { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
         if (manager.isNotFull() && manager.getFoodLevel() < manager.getPrevFoodLevel()) {
             while (manager.isNotFull()) {
+                AtomicInteger checks = new AtomicInteger();
                 AtomicInteger slot = new AtomicInteger();
                 player.getArmorItems().forEach(item -> {
                     if (item.toString().contains("chocolate_")) {
@@ -53,9 +54,11 @@ public class PlayerHungerDropsMixin {
                         item.damage(2, player, (p) -> {
                             p.sendEquipmentBreakStatus(slots[slot.get()]);
                         });
+                        checks.incrementAndGet();
                     }
                     slot.incrementAndGet();
                 });
+                if (checks.get() == 0) { break; }
                 player.getWorld().playSound(player, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 1f, 1f);
             }
         }
