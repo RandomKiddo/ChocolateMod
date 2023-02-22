@@ -22,6 +22,9 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.NetherPlacedFeatures;
 
+import static io.github.randomkiddo.worldgen.trees.TreeRegistry.SCORCHED_TREE_PLACED_FEATURE;
+import static io.github.randomkiddo.worldgen.trees.TreeRegistry.TREE_STEMS_PLACED_FEATURE;
+
 /**
  * Contains all methods and registry keys for custom nether biomes
  */
@@ -44,7 +47,7 @@ public class NetherBiomes {
                 EntityType.ZOGLIN, 10, 1, 2
         ));
         GenerationSettings.Builder generationSettings = new GenerationSettings.Builder();
-        //todo scorched trees
+        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, SCORCHED_TREE_PLACED_FEATURE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_SOUL_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.GLOWSTONE_EXTRA);

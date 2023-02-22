@@ -176,7 +176,7 @@ public class TreeRegistry {
     /**
      * The White Cherry Tree configured feature
      */
-    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> SCORCHED_TREE = ConfiguredFeatures.register("chocolate:white_cherry_tree", Feature.TREE,
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> SCORCHED_TREE = ConfiguredFeatures.register("chocolate:scorched_tree", Feature.TREE,
             new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(BlockRegistry.SCORCHED_LOGS),
                     new ForkingTrunkPlacer(4, 3, 0),
@@ -220,6 +220,10 @@ public class TreeRegistry {
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_sapling"), WHITE_CHERRY_SAPLING);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_sapling"), new BlockItem(
                 WHITE_CHERRY_SAPLING, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP)
+        ));
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "scorched_sapling"), SCORCHED_SAPLING);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "scorched_sapling"), new BlockItem(
+                SCORCHED_SAPLING, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP)
         ));
     }
 }

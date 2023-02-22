@@ -236,7 +236,7 @@ public class BlockRegistry {
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "scorched_logs"), SCORCHED_LOGS);
-        Registry.register(Registry.ITEM, new Identifier("chocolate", "scorched_logs_item"), SCORCHED_LOGS_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "scorched_logs"), SCORCHED_LOGS_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
         FuelRegistry.INSTANCE.add(WHITE_CHERRY_PLANKS_ITEM, 100);
