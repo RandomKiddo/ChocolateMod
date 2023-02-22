@@ -54,8 +54,10 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 			new Identifier("chocolate", "chocolate_group"))
 			.icon(() -> new ItemStack(Items.COCOA_BEANS))
 			.build();
+	/**
+	 * TerraBlender Config
+	 */
 	private static final TerraBlenderConfig CONFIG = new TerraBlenderConfig(FabricLoader.getInstance().getConfigDir().resolve("terrablender.toml"));
-
 	/**
 	 * Initializes the mod
 	 */
@@ -87,6 +89,6 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		Regions.register(new CloudForestRegion(new Identifier("chocolate", "cloud_forest"), RegionType.OVERWORLD, 2));
 		Regions.register(new CherryBlossomForestRegion(new Identifier("chocolate", "cherry_blossom_forest"), RegionType.OVERWORLD, 2));
 		Regions.register(new NetherReactorLeftoverRegion(new Identifier("chocolate", "nether_reactor_leftover"), RegionType.OVERWORLD, 2));
-		Regions.register(new ScorchedForestRegion(7));
+		Regions.register(new ScorchedForestRegion(15));
 	}
 }
