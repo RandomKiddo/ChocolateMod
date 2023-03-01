@@ -26,7 +26,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  * loses hunger, and runs specified code
  *
  * Injected into <code>update</code> at <code>TAIL</code>
- * Cancellable (required)
  *
  * @see Mixin
  * @see Inject
@@ -35,12 +34,19 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Mixin(HungerManager.class)
 public class PlayerHungerDropsMixin {
+    /**
+     * Injects the specified code into update
+     * @param player The player entity
+     * @param ci The callback info of the method
+     * @see PlayerEntity
+     */
     @Inject(method="update(Lnet/minecraft/entity/player/PlayerEntity;)V", at=@At("TAIL"))
     private void mixin(PlayerEntity player, CallbackInfo ci) {
         HungerManager manager = (HungerManager)(Object)this;
         final EquipmentSlot[] slots = { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
         if (manager.isNotFull() && manager.getFoodLevel() < manager.getPrevFoodLevel()) {
             while (manager.isNotFull()) {
+                AtomicInteger checks = new AtomicInteger();
                 AtomicInteger slot = new AtomicInteger();
                 player.getArmorItems().forEach(item -> {
                     if (item.toString().contains("chocolate_")) {
@@ -48,9 +54,11 @@ public class PlayerHungerDropsMixin {
                         item.damage(2, player, (p) -> {
                             p.sendEquipmentBreakStatus(slots[slot.get()]);
                         });
+                        checks.incrementAndGet();
                     }
                     slot.incrementAndGet();
                 });
+                if (checks.get() == 0) { break; }
                 player.getWorld().playSound(player, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 1f, 1f);
             }
         }

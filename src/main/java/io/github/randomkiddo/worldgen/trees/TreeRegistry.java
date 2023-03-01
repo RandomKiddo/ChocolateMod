@@ -18,9 +18,12 @@ import io.github.randomkiddo.worldgen.trees.CloudTrunkPlacer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
@@ -29,7 +32,9 @@ import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.BushFoliagePlacer;
 import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
+import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
@@ -141,6 +146,33 @@ public class TreeRegistry {
      * The white cherry tree placed feature
      */
     public static final RegistryEntry<PlacedFeature> WHITE_CHERRY_TREE_PLACED_FEATURE = PlacedFeatures.register("chocolate:white_cherry_tree", WHITE_CHERRY_TREE_SPAWN,
+            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
+    /**
+     * The tree stems configured feature
+     */
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TREE_STEMS = ConfiguredFeatures.register("chocolate:tree_stems", Feature.TREE,
+            new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(Blocks.OAK_LOG),
+                    new ForkingTrunkPlacer(4, 3, 0),
+                    BlockStateProvider.of(Blocks.AIR),
+                    new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 1),
+                    new TwoLayersFeatureSize(1, 0, 1)
+            ).build()
+    );
+    /**
+     * The check conditions for the white cherry tree
+     */
+    public static final RegistryEntry<PlacedFeature> TREE_STEMS_CHECKED = PlacedFeatures.register("chocolate:tree_stems_checked", TREE_STEMS,
+            List.of(PlacedFeatures.wouldSurvive(Blocks.OAK_SAPLING)));
+    /**
+     * The spawn specifications of the white cherry tree
+     */
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> TREE_STEMS_SPAWN = ConfiguredFeatures.register("chocolate:tree_stems_spawn", Feature.RANDOM_SELECTOR,
+            new RandomFeatureConfig(List.of(new RandomFeatureEntry(TREE_STEMS_CHECKED, 0.7f)), TREE_STEMS_CHECKED));
+    /**
+     * The white cherry tree placed feature
+     */
+    public static final RegistryEntry<PlacedFeature> TREE_STEMS_PLACED_FEATURE = PlacedFeatures.register("chocolate:tree_stems", TREE_STEMS_SPAWN,
             VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
     /**
      * Registers all the un-registered fields above

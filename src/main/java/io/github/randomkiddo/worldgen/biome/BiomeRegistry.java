@@ -12,8 +12,8 @@ package io.github.randomkiddo.worldgen.biome;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.CHERRY_BLOSSOM_FOREST_KEY;
-import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.CLOUD_FOREST_KEY;
+import static io.github.randomkiddo.worldgen.biome.NetherBiomes.QUARTZ_SPIKES_KEY;
+import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.*;
 
 /**
  * Registers all biomes for the mod
@@ -25,5 +25,7 @@ public class BiomeRegistry {
     public static void register() {
         Registry.register(BuiltinRegistries.BIOME, CLOUD_FOREST_KEY, OverworldBiomes.cloudForest());
         Registry.register(BuiltinRegistries.BIOME, CHERRY_BLOSSOM_FOREST_KEY, OverworldBiomes.cherryBlossomForest());
+        Registry.register(BuiltinRegistries.BIOME, NETHER_REACTOR_LEFTOVER_KEY, OverworldBiomes.netherReactorLeftover());
+        Registry.register(BuiltinRegistries.BIOME, QUARTZ_SPIKES_KEY, NetherBiomes.quartzSpikes());
     }
 }
