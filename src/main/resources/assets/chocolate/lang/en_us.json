@@ -96,8 +96,8 @@
   "biome.chocolate.cherry_blossom_forest": "Cherry Blossom Forest",
   "item.chocolate.long_bread": "Long Bread",
   "item.chocolate.baguette": "Baguette",
-  "block.chocolate.scorched_logs": "Scorched Log",
-  "item.chocolate.scorched_logs": "Scorched Log",
-  "block.chocolate.scorched_sapling": "Scorched Sapling",
-  "item.chocolate.scorched_sapling": "Scorched Sapling"
+  "biome.chocolate.nether_reactor_leftover": "Nether Reactor Leftover",
+  "biome.chocolate.quartz_spikes": "Quartz Spikes",
+  "block.chocolate.quartz_stem": "Quartz Stem",
+  "item.chocolate.quartz_stem": "Quartz Stem"
 }

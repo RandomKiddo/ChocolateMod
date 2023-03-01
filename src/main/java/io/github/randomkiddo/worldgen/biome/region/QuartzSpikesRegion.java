@@ -10,32 +10,27 @@
 package io.github.randomkiddo.worldgen.biome.region;
 
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
 import terrablender.api.Region;
-import terrablender.api.RegionType;
 import terrablender.worldgen.DefaultNetherRegion;
 
 import java.util.function.Consumer;
 
-import static io.github.randomkiddo.worldgen.biome.NetherBiomes.SCORCHED_FOREST_KEY;
+import static io.github.randomkiddo.worldgen.biome.NetherBiomes.QUARTZ_SPIKES_KEY;
 
 /**
- * Creates a custom region that contains the scorched forest
+ * Creates a custom region that contains the blood biome
  * @see Region
  */
-public class ScorchedForestRegion extends DefaultNetherRegion {
+public class QuartzSpikesRegion extends DefaultNetherRegion {
     /**
-     * Constructor for the scorched forest region
-     * @param id The identifier
-     * @param type The region type (dimension)
+     * Constructor for the blood region
      * @param weight The percentage weight for the region
      */
-    public ScorchedForestRegion(int weight) {
+    public QuartzSpikesRegion(int weight) {
         super(weight);
     }
 
@@ -45,9 +40,8 @@ public class ScorchedForestRegion extends DefaultNetherRegion {
      * @param mapper The mapping consumer
      */
     @Override public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-        this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            builder.replaceBiome(BiomeKeys.CRIMSON_FOREST, SCORCHED_FOREST_KEY);
-            builder.replaceBiome(BiomeKeys.WARPED_FOREST, SCORCHED_FOREST_KEY);
-        });
+        super.addBiomes(registry, mapper);
+        this.addBiome(mapper, MultiNoiseUtil.ParameterRange.of(0.0F), MultiNoiseUtil.ParameterRange.of(0.0F), MultiNoiseUtil.ParameterRange.of(0.0F),
+                MultiNoiseUtil.ParameterRange.of(0.0F), MultiNoiseUtil.ParameterRange.of(0.0F), MultiNoiseUtil.ParameterRange.of(0.0F), 0.0F, QUARTZ_SPIKES_KEY);
     }
 }

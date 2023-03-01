@@ -186,14 +186,14 @@ public class BlockRegistry {
     public static final BlockItem WHITE_CHERRY_LEAVES_ITEM = new BlockItem(
             WHITE_CHERRY_LEAVES, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
-     * Scorched Logs Block
+     *  Quartz Stem Block
      */
-    public static final Block SCORCHED_LOGS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f));
+    public static final Block QUARTZ_STEM = new Block(FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.2f, 0.2f));
     /**
-     * Scorched Logs Block as an item
+     * White Cherry Leaves Block as an item
      */
-    public static final BlockItem SCORCHED_LOGS_ITEM = new BlockItem(
-            SCORCHED_LOGS, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+    public static final BlockItem QUARTZ_STEM_ITEM = new BlockItem(
+            QUARTZ_STEM, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
     /**
      * Registers all the blocks and items above
      * @see Registry
@@ -235,8 +235,8 @@ public class BlockRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_planks"), WHITE_CHERRY_PLANKS_ITEM);
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_leaves"), WHITE_CHERRY_LEAVES_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier("chocolate", "scorched_logs"), SCORCHED_LOGS);
-        Registry.register(Registry.ITEM, new Identifier("chocolate", "scorched_logs"), SCORCHED_LOGS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier("chocolate", "quartz_stem"), QUARTZ_STEM);
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "quartz_stem"), QUARTZ_STEM_ITEM);
         FuelRegistry.INSTANCE.add(CLOUD_PLANKS_ITEM, 100); // Makes the wood smelt-able
         FuelRegistry.INSTANCE.add(CLOUD_LOGS_ITEM, 200);
         FuelRegistry.INSTANCE.add(WHITE_CHERRY_PLANKS_ITEM, 100);

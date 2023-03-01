@@ -32,13 +32,14 @@ import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.BushFoliagePlacer;
 import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
+import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -174,38 +175,6 @@ public class TreeRegistry {
     public static final RegistryEntry<PlacedFeature> TREE_STEMS_PLACED_FEATURE = PlacedFeatures.register("chocolate:tree_stems", TREE_STEMS_SPAWN,
             VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
     /**
-     * The White Cherry Tree configured feature
-     */
-    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> SCORCHED_TREE = ConfiguredFeatures.register("chocolate:scorched_tree", Feature.TREE,
-            new TreeFeatureConfig.Builder(
-                    BlockStateProvider.of(BlockRegistry.SCORCHED_LOGS),
-                    new ForkingTrunkPlacer(4, 3, 0),
-                    BlockStateProvider.of(Blocks.AIR),
-                    new AcaciaFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1)),
-                    new TwoLayersFeatureSize(1, 0, 1)
-            ).build()
-    );
-    /**
-     * The white cherry tree sapling
-     */
-    public static final ScorchedSaplingBlock SCORCHED_SAPLING = new ScorchedSaplingBlock(
-            new ScorchedSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
-    /**
-     * The check conditions for the white cherry tree
-     */
-    public static final RegistryEntry<PlacedFeature> SCORCHED_TREE_CHECKED = PlacedFeatures.register("chocolate:scorched_tree_checked", SCORCHED_TREE,
-            List.of(PlacedFeatures.wouldSurvive(SCORCHED_SAPLING)));
-    /**
-     * The spawn specifications of the white cherry tree
-     */
-    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> SCORCHED_TREE_SPAWN = ConfiguredFeatures.register("chocolate:scorched_tree_spawn", Feature.RANDOM_SELECTOR,
-            new RandomFeatureConfig(List.of(new RandomFeatureEntry(SCORCHED_TREE_CHECKED, 0.7f)), SCORCHED_TREE_CHECKED));
-    /**
-     * The white cherry tree placed feature
-     */
-    public static final RegistryEntry<PlacedFeature> SCORCHED_TREE_PLACED_FEATURE = PlacedFeatures.register("chocolate:scorched_tree", WHITE_CHERRY_TREE_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
-    /**
      * Registers all the un-registered fields above
      */
     public static void register() {
@@ -220,10 +189,6 @@ public class TreeRegistry {
         Registry.register(Registry.BLOCK, new Identifier("chocolate", "white_cherry_sapling"), WHITE_CHERRY_SAPLING);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "white_cherry_sapling"), new BlockItem(
                 WHITE_CHERRY_SAPLING, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP)
-        ));
-        Registry.register(Registry.BLOCK, new Identifier("chocolate", "scorched_sapling"), SCORCHED_SAPLING);
-        Registry.register(Registry.ITEM, new Identifier("chocolate", "scorched_sapling"), new BlockItem(
-                SCORCHED_SAPLING, new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP)
         ));
     }
 }

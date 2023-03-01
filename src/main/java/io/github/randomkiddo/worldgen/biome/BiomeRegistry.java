@@ -12,7 +12,7 @@ package io.github.randomkiddo.worldgen.biome;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.randomkiddo.worldgen.biome.NetherBiomes.SCORCHED_FOREST_KEY;
+import static io.github.randomkiddo.worldgen.biome.NetherBiomes.QUARTZ_SPIKES_KEY;
 import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.*;
 
 /**
@@ -26,6 +26,6 @@ public class BiomeRegistry {
         Registry.register(BuiltinRegistries.BIOME, CLOUD_FOREST_KEY, OverworldBiomes.cloudForest());
         Registry.register(BuiltinRegistries.BIOME, CHERRY_BLOSSOM_FOREST_KEY, OverworldBiomes.cherryBlossomForest());
         Registry.register(BuiltinRegistries.BIOME, NETHER_REACTOR_LEFTOVER_KEY, OverworldBiomes.netherReactorLeftover());
-        Registry.register(BuiltinRegistries.BIOME, SCORCHED_FOREST_KEY, NetherBiomes.scorchedForest());
+        Registry.register(BuiltinRegistries.BIOME, QUARTZ_SPIKES_KEY, NetherBiomes.quartzSpikes());
     }
 }

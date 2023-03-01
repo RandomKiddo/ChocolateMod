@@ -9,21 +9,21 @@
 
 package io.github.randomkiddo.worldgen.biome;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.random.RandomSplitter;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeEffects;
-import net.minecraft.world.biome.GenerationSettings;
-import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.NetherPlacedFeatures;
+import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 
-import static io.github.randomkiddo.worldgen.trees.TreeRegistry.SCORCHED_TREE_PLACED_FEATURE;
-import static io.github.randomkiddo.worldgen.trees.TreeRegistry.TREE_STEMS_PLACED_FEATURE;
+import static io.github.randomkiddo.worldgen.features.FeatureRegistry.*;
 
 /**
  * Contains all methods and registry keys for custom nether biomes
@@ -32,31 +32,27 @@ public class NetherBiomes {
     /**
      * Scorched forest registry key
      */
-    public static final RegistryKey<Biome> SCORCHED_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("chocolate", "scorched_forest"));
+    public static final RegistryKey<Biome> QUARTZ_SPIKES_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("chocolate", "quartz_spikes"));
     /**
-     * The scorched forest biome
-     * @return Biome instance of the scorched forest
+     * The blood biome
+     * @return Biome instance of the blood
      * @see Biome
      */
-    public static Biome scorchedForest() {
+    public static Biome quartzSpikes() {
         SpawnSettings.Builder spawnSettings = new SpawnSettings.Builder();
         spawnSettings.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(
-                EntityType.ZOMBIFIED_PIGLIN, 25, 1, 3
-        ));
-        spawnSettings.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(
-                EntityType.ZOGLIN, 10, 1, 2
+                EntityType.ZOGLIN, 1, 1, 1
         ));
         GenerationSettings.Builder generationSettings = new GenerationSettings.Builder();
-        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, SCORCHED_TREE_PLACED_FEATURE);
+        generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(QUARTZ_SPIKE_FEATURE_PLACED));
+        generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(QUARTZ_TREE_FEATURE_PLACED));
+        generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(NETHER_LAKE_FEATURE_PLACED));
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_SOUL_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.GLOWSTONE_EXTRA);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.GLOWSTONE);
         DefaultBiomeFeatures.addDefaultMushrooms(generationSettings);
-        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.BLACKSTONE_BLOBS);
-        generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.SMALL_BASALT_COLUMNS);
         generationSettings.feature(GenerationStep.Feature.FLUID_SPRINGS, NetherPlacedFeatures.SPRING_DELTA);
-        DefaultBiomeFeatures.addFrozenLavaSpring(generationSettings);
         return (new Biome.Builder())
                 .precipitation(Biome.Precipitation.NONE)
                 .temperature(2f)

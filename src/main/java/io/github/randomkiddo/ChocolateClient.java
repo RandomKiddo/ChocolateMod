@@ -48,7 +48,6 @@ public class ChocolateClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_SAPLING, RenderLayer.getCutout()); // Register cloud sapling rendering
         BlockRenderLayerMap.INSTANCE.putBlock(PINK_CHERRY_SAPLING, RenderLayer.getCutout()); // Register pink cherry sapling rendering
         BlockRenderLayerMap.INSTANCE.putBlock(WHITE_CHERRY_SAPLING, RenderLayer.getCutout()); // Register white cherry sapling rendering
-        BlockRenderLayerMap.INSTANCE.putBlock(SCORCHED_SAPLING, RenderLayer.getCutout());
         if (!ConfigRegistry.USING_FAST_GRAPHICS) { //todo check Level data
             BlockRenderLayerMap.INSTANCE.putBlock(CLOUD_LEAVES, RenderLayer.getCutout()); // Register cloud leaves rendering
             BlockRenderLayerMap.INSTANCE.putBlock(PINK_CHERRY_LEAVES, RenderLayer.getCutout()); // Register pink cherry leaves rendering
