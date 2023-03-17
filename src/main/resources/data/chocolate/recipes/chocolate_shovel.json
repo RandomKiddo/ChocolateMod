@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "chocolate:chocolate"
+    }
+  },
+  "result": {
+    "item": "chocolate:chocolate_shovel",
+    "count": 1
+  }
+}

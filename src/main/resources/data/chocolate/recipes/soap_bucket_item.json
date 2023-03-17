@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "ISI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "chocolate:soap"
+    }
+  },
+  "result": {
+    "item": "chocolate:soap_bucket",
+    "count": 1
+  }
+}

@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.enchants;

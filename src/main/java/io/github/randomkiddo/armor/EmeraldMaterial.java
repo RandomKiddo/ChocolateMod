@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.armor;
@@ -84,7 +84,7 @@ public class EmeraldMaterial implements ArmorMaterial {
 
     /**
      * Gets the knockback resistance value of this armor
-     * @return A flot value of .02f
+     * @return A float value of .02f
      */
     @Override public float getKnockbackResistance() { return 0.02f; }
 }

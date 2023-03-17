@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "chocolate:block/quartz_stem_top",
+    "bottom": "chocolate:block/quartz_stem_top",
+    "side": "chocolate:block/quartz_stem"
+  }
+}

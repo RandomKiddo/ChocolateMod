@@ -4,7 +4,7 @@
  *
  * Copyright © 2021 RandomKiddo
  * Copyright © 2022 RandomKiddo, danield33
- * Copyright © 2023 RandomKiddo
+ * Copyright © 2023 RandomKiddo, danield33, NithilB, pranavmoola, Mag1cmang0
  */
 
 package io.github.randomkiddo.ores;
@@ -64,7 +64,7 @@ public class OreRegistry {
      */
     private static ConfiguredFeature<?, ?> ETHERIUM_ORE_CONFIGURED_FEATURE = new ConfiguredFeature<>(
             Feature.ORE, new OreFeatureConfig(
-            new BlockMatchRuleTest(Blocks.END_STONE),
+            new BlockMatchRuleTest(Blocks.STONE),
             BlockRegistry.ETHERIUM_ORE.getDefaultState(), 9
     ));
     /**

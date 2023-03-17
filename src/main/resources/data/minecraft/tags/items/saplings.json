@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "chocolate:cloud_sapling"
+    "chocolate:cloud_sapling",
+    "chocolate:pink_cherry_sapling",
+    "chocolate:white_cherry_sapling"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "chocolate:block/pink_cherry_sapling"
+  }
+}

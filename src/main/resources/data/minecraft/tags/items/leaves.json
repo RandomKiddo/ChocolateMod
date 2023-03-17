@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "chocolate:cloud_leaves"
+    "chocolate:cloud_leaves",
+    "chocolate:pink_cherry_leaves",
+    "chocolate:white_cherry_leaves"
   ]
 }
