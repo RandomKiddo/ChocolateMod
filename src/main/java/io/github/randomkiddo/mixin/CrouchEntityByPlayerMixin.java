@@ -41,10 +41,8 @@ public class CrouchEntityByPlayerMixin {
             final double z = player.getZ();
             final AnimalEntity closestEntity = playerWorld.getClosestEntity(animalEntities, TargetPredicate.DEFAULT, null, x, y, z);
 
-            System.out.println("closestEntity = " + closestEntity);
             if (closestEntity != null && !closestEntity.isBaby()) {
                 final ClientWorld world = MinecraftClient.getInstance().world;
-                System.out.println("world = " + world);
 
                 if (world != null) {
                     int range = 1;
