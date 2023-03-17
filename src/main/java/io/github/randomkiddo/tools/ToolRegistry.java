@@ -25,8 +25,6 @@ public class ToolRegistry {
      */
     public static ToolItem FOSELIUM_PICKAXE = new FoseliumPickaxeItem(FoseliumMaterial.INSTANCE, 2, -2.8F, new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
 
-    public static ToolItem ETHERIUM_SWORD = new EtheriumSwordItem(EtheriumMaterial.INSTANCE, 6, -2.4F, new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
-    /**ium
     /**
      * Chocolate shovel instance
      */
@@ -62,14 +60,18 @@ public class ToolRegistry {
      */
     public static ToolItem COPPER_PICKAXE = new CopperPickaxeItem(CopperMaterial.INSTANCE, 1, -2.8F,
             new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+
+    /**
+     * Etherium Sword instance
+     */
+    public static ToolItem ETHERIUM_SWORD = new EtheriumSwordItem(EtheriumMaterial.INSTANCE, 6, -2.4F, new Item.Settings().group(Chocolate.CHOCOLATE_GROUP));
+
     /**
      * Registers all the tool instances above
      * @see Registry
      */
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_pickaxe"), FOSELIUM_PICKAXE);
-        Registry.register(Registry.ITEM,  new Identifier("chocolate", "etherium_sword"), ETHERIUM_SWORD);
-
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_shovel"), CHOCOLATE_SHOVEL);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_sword"), CHOCOLATE_SWORD);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_pickaxe"), CHOCOLATE_PICKAXE);
@@ -77,5 +79,6 @@ public class ToolRegistry {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "chocolate_hoe"), CHOCOLATE_HOE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_pickaxe"), COPPER_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("chocolate", "copper_sword"), COPPER_SWORD);
+        Registry.register(Registry.ITEM,  new Identifier("chocolate", "etherium_sword"), ETHERIUM_SWORD);
     }
 }
