@@ -77,9 +77,10 @@ public class OreRegistry {
             Arrays.asList(
                     CountPlacementModifier.of(2),
                     SquarePlacementModifier.of(),
-                    HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(80))
+                    HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(30))
             )
     );
+    
 
 
 
