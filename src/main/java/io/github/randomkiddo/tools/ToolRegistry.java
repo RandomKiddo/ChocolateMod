@@ -29,6 +29,7 @@ public class ToolRegistry {
      */
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_pickaxe"), FOSELIUM_PICKAXE);
+
     }
 }
 //todo texture for pickaxe

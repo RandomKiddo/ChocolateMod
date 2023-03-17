@@ -24,6 +24,12 @@ public class IngotRegistry {
      * Foselium ingot item
      */
     public static final Item FOSELIUM_INGOT = new Item(new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+
+    /**
+     * Etherium ingot item
+     */
+    public static final Item ETHERIUM_INGOT = new Item(new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP));
+
     /**
      * Registers all the ore features above
      * @see Registry
@@ -31,5 +37,9 @@ public class IngotRegistry {
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier("chocolate", "foselium_ingot"), FOSELIUM_INGOT);
         FuelRegistry.INSTANCE.add(FOSELIUM_INGOT, 300); // Foselium smelt-able
+        Registry.register(Registry.ITEM, new Identifier("chocolate", "etherium_ingot"), ETHERIUM_INGOT);
+        FuelRegistry.INSTANCE.add(ETHERIUM_INGOT, 301); // Etherium smelt-able
     }
+
+
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "chocolate:etherium_ore"
+  },
+  "result": "chocolate:etherium_ingot",
+  "experience": 2,
+  "cookingtime": 125
+}
