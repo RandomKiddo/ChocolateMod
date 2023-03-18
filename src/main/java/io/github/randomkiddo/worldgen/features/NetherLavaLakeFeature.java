@@ -18,8 +18,21 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
+/**
+ * Nether Lava Lake Feature (generation behavior)
+ */
 public class NetherLavaLakeFeature extends Feature<NetherLavaLakeFeatureConfig> {
+    /**
+     * Default constructor
+     * @param configCodec The custom codec
+     */
     public NetherLavaLakeFeature(Codec<NetherLavaLakeFeatureConfig> configCodec) { super(configCodec); }
+
+    /**
+     * Generates the feature
+     * @param ctx The feature context
+     * @return A boolean representing success or failure
+     */
     @Override public boolean generate(FeatureContext<NetherLavaLakeFeatureConfig> ctx) {
         StructureWorldAccess world = ctx.getWorld();
         BlockPos origin = ctx.getOrigin();

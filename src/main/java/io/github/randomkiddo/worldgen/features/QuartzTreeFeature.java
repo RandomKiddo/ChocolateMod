@@ -19,10 +19,22 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
+/**
+ * Quartz Tree Feature (generation behavior)
+ */
 public class QuartzTreeFeature extends Feature<QuartzTreeFeatureConfig> {
+    /**
+     * Default constructor
+     * @param configCodec The custom codec
+     */
     public QuartzTreeFeature(Codec<QuartzTreeFeatureConfig> configCodec) {
         super(configCodec);
     }
+    /**
+     * Generates the feature
+     * @param ctx The feature context
+     * @return A boolean representing success or failure
+     */
     @Override public boolean generate(FeatureContext<QuartzTreeFeatureConfig> ctx) {
         StructureWorldAccess world = ctx.getWorld();
         BlockPos origin = ctx.getOrigin();
