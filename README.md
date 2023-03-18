@@ -93,22 +93,22 @@ Copyrights Held: © 2023
 
 ___
 
-### Nickelboi
+### SpicyNik
 
 <sub>Creative Director</sub>
 
 I am majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
 
-Years Active on Project: N/A
+Years Active on Project: 2023
 
 Copyrights Held: None
 
-No Profile Link
+[Profile Link](https://github.com/SpicyNik)
 
 ___
 
 [Back to Top](#chocolate)
 
-<sub>This page was last edited on 01.19.2023 by `RandomKiddo`</sub>
+<sub>This page was last edited on 03.17.2023 by `RandomKiddo`</sub>
 
 <sub>This repository's contents are licensed by the GNU GPLv3 License. See [LICENSE](https://github.com/RandomKiddo/ChocolateMod/blob/master/LICENSE) or [GNU GPLv3 Website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details</sub>
