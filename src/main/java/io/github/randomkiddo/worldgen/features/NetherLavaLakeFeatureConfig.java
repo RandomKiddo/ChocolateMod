@@ -14,14 +14,38 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
+/**
+ * Nether Lava Lake Feature Config (record)
+ * @param depth The depth of the feature
+ * @param width The width of the feature
+ */
 public record NetherLavaLakeFeatureConfig(int depth, int width) implements FeatureConfig {
+    /**
+     * Nether Lava Lake Feature config constructor
+     * @param depth The depth
+     * @param width The width
+     */
     public NetherLavaLakeFeatureConfig(int depth, int width) { this.depth = depth; this.width = width; }
+
+    /**
+     * The codec of the feature config
+     */
     public static Codec<NetherLavaLakeFeatureConfig> CODEC = RecordCodecBuilder.create(
             instance -> instance.group(
                     Codecs.POSITIVE_INT.fieldOf("depth").forGetter(NetherLavaLakeFeatureConfig::depth),
                     Codecs.POSITIVE_INT.fieldOf("width").forGetter(NetherLavaLakeFeatureConfig::width)
             ).apply(instance, NetherLavaLakeFeatureConfig::new)
     );
+
+    /**
+     * The depth of the feature
+     * @return An int of the depth
+     */
     public int depth() { return this.depth; }
+
+    /**
+     * The width of the feature
+     * @return An int of the width
+     */
     public int width() { return this.width; }
 }

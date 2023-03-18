@@ -18,11 +18,23 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
+/**
+ * Quartz Spike Feature (generation behavior)
+ */
 public class QuartzSpikeFeature extends Feature<QuartzSpikeFeatureConfig> {
+    /**
+     * Default constructor
+     * @param configCodec The custom codec
+     */
     public QuartzSpikeFeature(Codec<QuartzSpikeFeatureConfig> configCodec) {
         super(configCodec);
     }
 
+    /**
+     * Generates the feature
+     * @param ctx The feature context
+     * @return A boolean representing success or failure
+     */
     @Override public boolean generate(FeatureContext<QuartzSpikeFeatureConfig> ctx) {
         StructureWorldAccess world = ctx.getWorld();
         BlockPos origin = ctx.getOrigin();

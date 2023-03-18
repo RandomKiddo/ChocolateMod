@@ -24,30 +24,66 @@ import java.util.List;
  * Registers all features for this mod
  */
 public class FeatureRegistry {
+    /**
+     * Feature id for quartz spikes
+     */
     public static final Identifier QUARTZ_SPIKE_FEATURE_ID = new Identifier("chocolate", "quartz_spike_feature");
+    /**
+     * Quartz spike feature
+     */
     public static Feature<QuartzSpikeFeatureConfig> QUARTZ_SPIKE_FEATURE = new QuartzSpikeFeature(QuartzSpikeFeatureConfig.CODEC);
+    /**
+     * Quartz spike configured feature
+     */
     public static ConfiguredFeature<QuartzSpikeFeatureConfig, QuartzSpikeFeature> QUARTZ_SPIKE_FEATURE_CONFIGURED = new ConfiguredFeature<>(
             (QuartzSpikeFeature)QUARTZ_SPIKE_FEATURE,
             new QuartzSpikeFeatureConfig(7)
     );
+    /**
+     * Quartz spike placed feature
+     */
     public static PlacedFeature QUARTZ_SPIKE_FEATURE_PLACED = new PlacedFeature(
             RegistryEntry.of(QUARTZ_SPIKE_FEATURE_CONFIGURED), List.of(SquarePlacementModifier.of())
     );
+    /**
+     * Quartz tree feature id
+     */
     public static final Identifier QUARTZ_TREE_FEATURE_ID = new Identifier("chocolate", "quartz_tree_feature");
+    /**
+     * Quartz tree feature
+     */
     public static Feature<QuartzTreeFeatureConfig> QUARTZ_TREE_FEATURE = new QuartzTreeFeature(QuartzTreeFeatureConfig.CODEC);
+    /**
+     * Quartz tree feature configured
+     */
     public static ConfiguredFeature<QuartzTreeFeatureConfig, QuartzTreeFeature> QUARTZ_TREE_FEATURE_CONFIGURED = new ConfiguredFeature<>(
             (QuartzTreeFeature)QUARTZ_TREE_FEATURE,
             new QuartzTreeFeatureConfig(0)
     );
+    /**
+     * Quartz tree placed feature
+     */
     public static PlacedFeature QUARTZ_TREE_FEATURE_PLACED = new PlacedFeature(
             RegistryEntry.of(QUARTZ_TREE_FEATURE_CONFIGURED), List.of(SquarePlacementModifier.of())
     );
+    /**
+     * Nether lake feature id
+     */
     public static final Identifier NETHER_LAKE_FEATURE_ID = new Identifier("chocolate", "nether_lake_feature");
+    /**
+     * Nether lake feature
+     */
     public static Feature<NetherLavaLakeFeatureConfig> NETHER_LAKE_FEATURE = new NetherLavaLakeFeature(NetherLavaLakeFeatureConfig.CODEC);
+    /**
+     * Nether lake configured feature
+     */
     public static ConfiguredFeature<NetherLavaLakeFeatureConfig, NetherLavaLakeFeature> NETHER_LAKE_FEATURE_CONFIGURED = new ConfiguredFeature<>(
             (NetherLavaLakeFeature)NETHER_LAKE_FEATURE,
             new NetherLavaLakeFeatureConfig(3, 5)
     );
+    /**
+     * Nether lake placed feature
+     */
     public static PlacedFeature NETHER_LAKE_FEATURE_PLACED = new PlacedFeature(
             RegistryEntry.of(NETHER_LAKE_FEATURE_CONFIGURED), List.of(SquarePlacementModifier.of())
     );
