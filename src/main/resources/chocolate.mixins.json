@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "InLiquidMixin", "CloudTrunkPlacerTypeInvoker", "NumbDamageTrackerMixin", "InChocolateMilkMixin",
-    "PlayerDamageMixin", "PlayerHungerDropsMixin", "TechnoPigCrownMixin", "EntityDamagedByPlayerMixin",
-    "CrouchEntityByPlayerMixin"
+    "PlayerDamageMixin", "PlayerHungerDropsMixin", "TechnoPigCrownMixin", "EntityDamagedByPlayerMixin"
   ],
   "client": [],
   "server": [],
