@@ -26,6 +26,9 @@
     ],
     "terrablender": [
       "io.github.randomkiddo.Chocolate"
+    ],
+    "fabric-datagen": [
+      "io.github.randomkiddo.datagen.DataGeneration"
     ]
   },
   "mixins": [

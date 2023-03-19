@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "got_cocoa_beans": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cocoa_beans"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "The wonders of a new flavor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Chocolate"
+    }
+  },
+  "requirements": [
+    [
+      "got_cocoa_beans"
+    ]
+  ]
+}
