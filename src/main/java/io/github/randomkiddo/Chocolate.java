@@ -35,6 +35,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
+import software.bernie.geckolib3.GeckoLib;
 import terrablender.api.RegionType;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
@@ -83,6 +84,8 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		FeatureRegistry.register();
 
 		TerraBlender.setConfig(CONFIG);
+
+		GeckoLib.initialize();
 	}
 
 	/**
