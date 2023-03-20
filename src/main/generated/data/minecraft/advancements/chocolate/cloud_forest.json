@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:chocolate/root",
+  "criteria": {
+    "in_cloud_forest": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "chocolate:cloud_forest"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "Wow, it's beautiful!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:white_stained_glass_pane"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cloud Forest"
+    }
+  },
+  "requirements": [
+    [
+      "in_cloud_forest"
+    ]
+  ]
+}

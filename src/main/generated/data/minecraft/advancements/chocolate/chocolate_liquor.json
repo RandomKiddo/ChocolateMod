@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/cocoa_butter",
+  "criteria": {
+    "got_chocolate_liquor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:chocolate_liquor"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "LIQUOR? Wait..."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:chocolate_liquor"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Chocolate Liquor"
+    }
+  },
+  "requirements": [
+    [
+      "got_chocolate_liquor"
+    ]
+  ]
+}

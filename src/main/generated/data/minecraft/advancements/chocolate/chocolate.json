@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/chocolate_liquor",
+  "criteria": {
+    "got_chocolate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:chocolate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "CHOCOLATE!"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:chocolate"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "CHOCOLATE"
+    }
+  },
+  "requirements": [
+    [
+      "got_chocolate"
+    ]
+  ]
+}

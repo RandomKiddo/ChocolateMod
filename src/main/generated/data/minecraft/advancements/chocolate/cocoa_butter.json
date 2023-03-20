@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/roasted_cocoa_beans",
+  "criteria": {
+    "got_cocoa_butter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:cocoa_butter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "Chocolate Butter?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:cocoa_butter"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cocoa Butter"
+    }
+  },
+  "requirements": [
+    [
+      "got_cocoa_butter"
+    ]
+  ]
+}

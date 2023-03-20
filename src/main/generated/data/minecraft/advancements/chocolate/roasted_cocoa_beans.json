@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/root",
+  "criteria": {
+    "got_roasted_cocoa_beans": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:roasted_cocoa_beans"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "What are you up to?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:roasted_cocoa_beans"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Roasted Cocoa Beans"
+    }
+  },
+  "requirements": [
+    [
+      "got_roasted_cocoa_beans"
+    ]
+  ]
+}
