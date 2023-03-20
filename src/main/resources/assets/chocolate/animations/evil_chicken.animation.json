@@ -1,0 +1,76 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.evil_chicken.idle": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"wing0": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, "12.5+variable.wing_flap - this"]
+						},
+						"2.5": {
+							"vector": [0, 0, "variable.wing_flap - this"]
+						},
+						"5.0": {
+							"vector": [0, 0, "12.5+variable.wing_flap - this"]
+						}
+					}
+				},
+				"wing1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, "-12.5+variable.wing_flap - this"]
+						},
+						"2.5": {
+							"vector": [0, 0, "-variable.wing_flap - this"]
+						},
+						"4.9583": {
+							"vector": [0, 0, "-12.5+variable.wing_flap - this"]
+						}
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [9, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 15, 0]
+						},
+						"3.0": {
+							"vector": [0, -15, 0]
+						},
+						"4.0": {
+							"vector": [-5, 0, 0]
+						},
+						"5.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.evil_chicken.walk": {
+			"loop": true,
+			"anim_time_update": "query.modified_distance_moved",
+			"bones": {
+				"leg0": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time * 38.17) *  80.0", 0, 0]
+					}
+				},
+				"leg1": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time * 38.17) * -80.0", 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
