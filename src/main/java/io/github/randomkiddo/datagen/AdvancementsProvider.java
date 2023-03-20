@@ -14,13 +14,18 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
+import net.minecraft.predicate.entity.LocationPredicate;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
 import static io.github.randomkiddo.chocolates.ChocolateRegistry.*;
+import static io.github.randomkiddo.ores.IngotRegistry.FOSELIUM_INGOT;
+import static io.github.randomkiddo.tools.ToolRegistry.FOSELIUM_PICKAXE;
+import static io.github.randomkiddo.worldgen.biome.OverworldBiomes.CLOUD_FOREST_KEY;
 
 
 public class AdvancementsProvider extends FabricAdvancementProvider {
@@ -101,6 +106,48 @@ public class AdvancementsProvider extends FabricAdvancementProvider {
                     .parent(chocolateLiquor)
                     .criterion("got_chocolate", InventoryChangedCriterion.Conditions.items(CHOCOLATE))
                     .build(consumer, "chocolate" + "/chocolate");
+            Advancement foselium = Advancement.Builder.create()
+                    .display(
+                            FOSELIUM_INGOT,
+                            Text.literal("Foselium Ingot"),
+                            Text.literal("What is this? Fossilized Extract?"),
+                            new Identifier("chocolate:textures/block/cloud_planks.png"),
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
+                    .parent(rootAdvancement)
+                    .criterion("got_foselium", InventoryChangedCriterion.Conditions.items(FOSELIUM_INGOT))
+                    .build(consumer, "chocolate" + "/foselium");
+            Advancement foseliumPickaxe = Advancement.Builder.create()
+                    .display(
+                            FOSELIUM_PICKAXE,
+                            Text.literal("Foselium Pickaxe"),
+                            Text.literal("What kind of sorcery is this?"),
+                            new Identifier("chocolate:textures/block/cloud_planks.png"),
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
+                    .parent(foselium)
+                    .criterion("got_foselium_pickaxe", InventoryChangedCriterion.Conditions.items(FOSELIUM_PICKAXE))
+                    .build(consumer, "chocolate" + "/foselium_pickaxe");
+            Advancement cloudForest = Advancement.Builder.create()
+                    .display(
+                            Items.WHITE_STAINED_GLASS_PANE,
+                            Text.literal("Cloud Forest"),
+                            Text.literal("Wow, it's beautiful!"),
+                            new Identifier("chocolate:textures/block/cloud_planks.png"),
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
+                    .parent(rootAdvancement)
+                    .criterion("in_cloud_forest", TickCriterion.Conditions.createLocation(LocationPredicate.biome(CLOUD_FOREST_KEY)))
+                    .build(consumer, "chocolate" + "/cloud_forest");
         }
     }
 }

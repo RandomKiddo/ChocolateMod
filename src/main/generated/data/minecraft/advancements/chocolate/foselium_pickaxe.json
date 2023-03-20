@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:chocolate/foselium",
+  "criteria": {
+    "got_foselium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:foselium_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "What kind of sorcery is this?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:foselium_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Foselium Pickaxe"
+    }
+  },
+  "requirements": [
+    [
+      "got_foselium_pickaxe"
+    ]
+  ]
+}

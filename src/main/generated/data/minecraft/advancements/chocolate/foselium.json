@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/root",
+  "criteria": {
+    "got_foselium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:foselium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "What is this? Fossilized Extract?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:foselium_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Foselium Ingot"
+    }
+  },
+  "requirements": [
+    [
+      "got_foselium"
+    ]
+  ]
+}
