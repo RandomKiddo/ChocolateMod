@@ -22,7 +22,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+@SuppressWarnings({ "deprecated" })
 public class EvilChickenEntity extends HostileEntity implements IAnimatable {
+    @SuppressWarnings({ "deprecated" })
     private AnimationFactory factory = new AnimationFactory(this);
 
     public EvilChickenEntity(EntityType<? extends HostileEntity> entityType, World world) {
@@ -30,7 +32,6 @@ public class EvilChickenEntity extends HostileEntity implements IAnimatable {
     }
 
     @Nullable
-
     public HostileEntity createChild(ServerWorld world, HostileEntity entity) {
         return null;
     }
@@ -49,7 +50,7 @@ public class EvilChickenEntity extends HostileEntity implements IAnimatable {
         this.targetSelector.add(2, new ActiveTargetGoal(this, PlayerEntity.class, true));
     }
 
-
+    @SuppressWarnings({ "deprecated" })
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.evil_chicken.walk", true));

@@ -20,18 +20,11 @@ public class EntityRegistry {
             Registry.ENTITY_TYPE, new Identifier("chocolate", "evil_chicken"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, EvilChickenEntity::new)
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
-
     public static final Item EVIL_CHICKEN_SPAWN_EGG = registerItem("evil_chicken_spawn_egg",
             new SpawnEggItem(EntityRegistry.EVIL_CHICKEN, 0x948e8d, 0x3b3635,
                     new FabricItemSettings().group(Chocolate.CHOCOLATE_GROUP).maxCount(1)));
-
-    public static void registerModStuffs() {
-        registerAttributes();
-    }z
-
-    private static void registerAttributes() {
+    public static void register() {
         FabricDefaultAttributeRegistry.register(EntityRegistry.EVIL_CHICKEN, EvilChickenEntity.setAttributes());
     }
-
 }
 

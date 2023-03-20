@@ -16,6 +16,7 @@ import io.github.randomkiddo.config.ConfigRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
 import io.github.randomkiddo.enchants.*;
+import io.github.randomkiddo.entities.EntityRegistry;
 import io.github.randomkiddo.fluids.FluidRegistry;
 import io.github.randomkiddo.items.ItemRegistry;
 import io.github.randomkiddo.ores.IngotRegistry;
@@ -82,6 +83,7 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		ConfigRegistry.register();
 		BiomeRegistry.register();
 		FeatureRegistry.register();
+		EntityRegistry.register();
 
 		TerraBlender.setConfig(CONFIG);
 

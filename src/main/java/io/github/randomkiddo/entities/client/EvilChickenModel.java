@@ -7,6 +7,7 @@ import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
+@SuppressWarnings({ "deprecated" })
 public class EvilChickenModel extends AnimatedGeoModel<EvilChickenEntity> {
 
     @Override
@@ -24,7 +25,7 @@ public class EvilChickenModel extends AnimatedGeoModel<EvilChickenEntity> {
         return new Identifier("chocolate", "animations/evil_chicken.animation.json");
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes"})
+    @SuppressWarnings({ "unchecked", "rawtypes", "deprecated" })
     @Override
     public void setLivingAnimations(EvilChickenEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
         super.setLivingAnimations(entity, uniqueID, customPredicate);
