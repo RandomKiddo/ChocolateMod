@@ -77,6 +77,6 @@ public class ChocolateClient implements ClientModInitializer {
         ); //Register client-side of soap fluid
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), FluidRegistry.STILL_SOAP, FluidRegistry.FLOWING_SOAP);
 
-        EntityRendererRegistry.register(EntityRegistry.EVIL_CHICKEN, EvilChickenRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.EVIL_CHICKEN, EvilChickenRenderer::new); // Register client entity
     }
 }
