@@ -12,7 +12,8 @@ A FabricMC mod that enhances Vanilla Minecraft seamlessly
 
 ___
 
-For information on what this mod adds, see this repository's [wiki](https://github.com/RandomKiddo/Chocolate/wiki)
+To see the original (and unfinished mod), click [here](https://github.com/RandomKiddo/Chocolate/) <br>
+For information on what this mod adds, see this repository's [wiki](https://github.com/RandomKiddo/ChocolateMod/wiki)
 
 ___
 ## Collaborators
@@ -53,7 +54,7 @@ ___
 
 ### NithilB
 
-<sub>Developer</sub>
+<sub>Junior Developer</sub>
 
 Average Sigma Male Anime Consumer that Games Valorant and MC w/ the Bois
 
@@ -95,7 +96,7 @@ ___
 
 ### SpicyNik
 
-<sub>Creative Director</sub>
+<sub>Creative Director, Texture Designer</sub>
 
 I am majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
 
@@ -107,8 +108,22 @@ Copyrights Held: None
 
 ___
 
+### rayofdoom26
+
+<sub>Junior Developer</sub>
+
+N/A
+
+Years Active on Project: 2023
+
+Copyrights Held: None
+
+[Profile Link](https://github.com/rayofdoom26)
+
+___
+
 [Back to Top](#chocolate)
 
-<sub>This page was last edited on 03.17.2023 by `RandomKiddo`</sub>
+<sub>This page was last edited on 03.31.2023 by `RandomKiddo`</sub>
 
 <sub>This repository's contents are licensed by the GNU GPLv3 License. See [LICENSE](https://github.com/RandomKiddo/ChocolateMod/blob/master/LICENSE) or [GNU GPLv3 Website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details</sub>

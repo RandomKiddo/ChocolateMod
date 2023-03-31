@@ -148,6 +148,20 @@ public class AdvancementsProvider extends FabricAdvancementProvider {
                     .parent(rootAdvancement)
                     .criterion("in_cloud_forest", TickCriterion.Conditions.createLocation(LocationPredicate.biome(CLOUD_FOREST_KEY)))
                     .build(consumer, "chocolate" + "/cloud_forest");
+            Advancement darkChocolate = Advancement.Builder.create()
+                    .display(
+                            DARK_CHOCOLATE,
+                            Text.literal("HEALTHIER CHOCOLATE"),
+                            Text.literal("MORE CHOCOLATE!"),
+                            new Identifier("chocolate:textures/block/cloud_planks.png"),
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
+                    .parent(chocolateLiquor)
+                    .criterion("got_chocolate_dark", InventoryChangedCriterion.Conditions.items(DARK_CHOCOLATE))
+                    .build(consumer, "chocolate" + "/chocolate_dark");
         }
     }
 }
