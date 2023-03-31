@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:chocolate/chocolate_liquor",
+  "criteria": {
+    "got_chocolate_dark": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "chocolate:chocolate_dark"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "chocolate:textures/block/cloud_planks.png",
+    "description": {
+      "text": "MORE CHOCOLATE!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "chocolate:chocolate_dark"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "HEALTHIER CHOCOLATE"
+    }
+  },
+  "requirements": [
+    [
+      "got_chocolate_dark"
+    ]
+  ]
+}
