@@ -53,7 +53,7 @@ ___
 
 ### NithilB
 
-<sub>Developer</sub>
+<sub>Junior Developer</sub>
 
 Average Sigma Male Anime Consumer that Games Valorant and MC w/ the Bois
 
@@ -95,7 +95,7 @@ ___
 
 ### SpicyNik
 
-<sub>Creative Director</sub>
+<sub>Creative Director, Texture Designer</sub>
 
 I am majoring in neuroscience at The Ohio State University. I am an Eagle Scout with troop 200. I like going distance biking. I enjoy playing video games and hanging out with friends. I am a violin player. I also enjoy playing sports casually with friends.
 
@@ -104,6 +104,20 @@ Years Active on Project: 2023
 Copyrights Held: None
 
 [Profile Link](https://github.com/SpicyNik)
+
+___
+
+### rayofdoom26
+
+<sub>Junior Developer</sub>
+
+N/A
+
+Years Active on Project: 2023
+
+Copyrights Held: None
+
+[Profile Link](https://github.com/rayofdoom26)
 
 ___
 
