@@ -12,7 +12,8 @@ A FabricMC mod that enhances Vanilla Minecraft seamlessly
 
 ___
 
-For information on what this mod adds, see this repository's [wiki](https://github.com/RandomKiddo/Chocolate/wiki)
+To see the original (and unfinished mod), click [here](https://github.com/RandomKiddo/Chocolate/) <br>
+For information on what this mod adds, see this repository's [wiki](https://github.com/RandomKiddo/ChocolateMod/wiki)
 
 ___
 ## Collaborators
@@ -123,6 +124,6 @@ ___
 
 [Back to Top](#chocolate)
 
-<sub>This page was last edited on 03.17.2023 by `RandomKiddo`</sub>
+<sub>This page was last edited on 03.31.2023 by `RandomKiddo`</sub>
 
 <sub>This repository's contents are licensed by the GNU GPLv3 License. See [LICENSE](https://github.com/RandomKiddo/ChocolateMod/blob/master/LICENSE) or [GNU GPLv3 Website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details</sub>
