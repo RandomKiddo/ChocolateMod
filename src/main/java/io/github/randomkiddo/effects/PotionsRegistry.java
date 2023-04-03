@@ -36,7 +36,7 @@ public class PotionsRegistry {
                 new Potion(new StatusEffectInstance(StatusEffectsRegistry.FREEZE, 30*20, 0)));
         //Numb Potion
         Registry.register(Registry.POTION, new Identifier("chocolate", "numb_potion"),
-                new Potion(new StatusEffectInstance(StatusEffectsRegistry.NUMB, 30, 0)));
+                new Potion(new StatusEffectInstance(StatusEffectsRegistry.NUMB, 30*20, 0)));
         // Register Recipes
         BrewingRecipeRegistry.registerPotionRecipe(
                 Potions.THICK,
