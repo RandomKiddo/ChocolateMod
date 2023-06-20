@@ -30,7 +30,7 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.19.2-2.0.1.130'
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.19.2-2.0.1.136'
 }
 
 processResources {
