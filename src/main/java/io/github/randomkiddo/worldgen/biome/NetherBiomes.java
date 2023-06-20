@@ -44,15 +44,13 @@ public class NetherBiomes {
                 EntityType.ZOGLIN, 1, 1, 1
         ));
         GenerationSettings.Builder generationSettings = new GenerationSettings.Builder();
-        generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(QUARTZ_SPIKE_FEATURE_PLACED));
         generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(QUARTZ_TREE_FEATURE_PLACED));
-        generationSettings.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryEntry.of(NETHER_LAKE_FEATURE_PLACED));
+        DefaultBiomeFeatures.addDefaultMushrooms(generationSettings);
+        generationSettings.feature(GenerationStep.Feature.FLUID_SPRINGS, NetherPlacedFeatures.SPRING_DELTA);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.PATCH_SOUL_FIRE);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.GLOWSTONE_EXTRA);
         generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, NetherPlacedFeatures.GLOWSTONE);
-        DefaultBiomeFeatures.addDefaultMushrooms(generationSettings);
-        generationSettings.feature(GenerationStep.Feature.FLUID_SPRINGS, NetherPlacedFeatures.SPRING_DELTA);
         return (new Biome.Builder())
                 .precipitation(Biome.Precipitation.NONE)
                 .temperature(2f)

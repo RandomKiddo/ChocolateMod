@@ -85,9 +85,9 @@ public class QuartzTreeFeature extends Feature<QuartzTreeFeatureConfig> {
                         test = test.up();
                         if (test.getY() >= world.getTopY()) { break; }
                     }
-                    return true;
                 }
             }
+            return true;
         } else {
             BlockPos test = new BlockPos(origin);
             /* no behavior yet */ //todo
