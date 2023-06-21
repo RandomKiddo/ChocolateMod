@@ -100,5 +100,7 @@
   "biome.chocolate.quartz_spikes": "Quartz Spikes",
   "block.chocolate.quartz_stem": "Quartz Stem",
   "item.chocolate.quartz_stem": "Quartz Stem",
-  "item.chocolate.chocolate_dark": "Dark Chocolate"
+  "item.chocolate.chocolate_dark": "Dark Chocolate",
+  "block.chocolate.etherium_ore": "Etherium Ore",
+  "item.chocolate.etherium_ore": "Etherium Ore"
 }
