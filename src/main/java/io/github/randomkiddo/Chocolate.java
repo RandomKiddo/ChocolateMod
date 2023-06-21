@@ -12,6 +12,7 @@ package io.github.randomkiddo;
 import io.github.randomkiddo.armor.ArmorRegistry;
 import io.github.randomkiddo.blocks.BlockRegistry;
 import io.github.randomkiddo.chocolates.ChocolateRegistry;
+import io.github.randomkiddo.commands.CommandRegistry;
 import io.github.randomkiddo.config.ConfigRegistry;
 import io.github.randomkiddo.effects.PotionsRegistry;
 import io.github.randomkiddo.effects.StatusEffectsRegistry;
@@ -81,6 +82,7 @@ public class Chocolate implements ModInitializer, TerraBlenderApi {
 		ConfigRegistry.register();
 		BiomeRegistry.register();
 		FeatureRegistry.register();
+		CommandRegistry.register();
 
 		TerraBlender.setConfig(CONFIG);
 	}
