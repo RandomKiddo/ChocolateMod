@@ -29,6 +29,10 @@ public class ConfigRegistry {
      * Holds if the user is using fast graphics
      */
     public static boolean USING_FAST_GRAPHICS;
+    /**
+     * Holds if the user wishes to enable lag reduction programs
+     */
+    public static boolean ENABLE_LAG_REDUCTION;
 
     /**
      * Registers the configs
@@ -37,7 +41,9 @@ public class ConfigRegistry {
         LogManager.getLogManager().addLogger(MainConfig.LOGGER);
         configs = new ConfigProvider();
         configs.addKeyValuePair(new Pair<>("default.graphics.fast", false), "boolean");
+        configs.addKeyValuePair(new Pair<>("enable.lag.reduction", false), "boolean");
         CONFIG = MainConfig.of("chocolateconfig").provider(configs).request();
         USING_FAST_GRAPHICS = CONFIG.getOrDefault("default.graphics.fast", false);
+        ENABLE_LAG_REDUCTION = CONFIG.getOrDefault("enable.lag.reduction", false);
     }
 }
